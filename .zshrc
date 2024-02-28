@@ -68,10 +68,8 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git web-search zsh-autosuggestions node npm python)
+plugins=(git web-search zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
-
-
 
 # User configuration
 
@@ -90,10 +88,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-export PATH="$HOME/Programs/WebStorm-203.7148.54/bin:$PATH"
-export PATH="$HOME/Programs/selenium/chromedriver_linux64/:$PATH"
-# export PATH="$HOME/Programs/ghidra-Ghidra_10.1.5_build/bin:$PATH"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -103,22 +97,52 @@ export PATH="$HOME/Programs/selenium/chromedriver_linux64/:$PATH"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gs="git status"
-# alias vim="nvim"
+alias vim="nvim"
 
+# Run fortune on each session
 fortune
 # source /home/ali/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
+# Environment variables
 export EDITOR="nvim"
-export TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins/"
 
-# tmux automatic window name change dir
+# nvim path
+export PATH="$PATH:/opt/nvim/"
+
+# tmux setup plugins
+export TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins/"
+## tmux automatic window name change dir
 tmux-window-name() {
 	($TMUX_PLUGIN_MANAGER_PATH/tmux-window-name/scripts/rename_session_windows.py &)
 }
 add-zsh-hook chpwd tmux-window-name
+
+
+# Setup ssh-agent and keyserver
+#
+# eval `ssh-agent -s`
+# ssh-add ~/.ssh/*_rsa
+# eval `keychain --eval`
+# ssh-add ~/.ssh/*_rsa
+# is this an interactive shell?
+if [[ $- == *i* ]]; then
+    # set up ssh key server
+    if [[ -x /usr/bin/keychain ]]; then
+        eval $(keychain --eval --ignore-missing ~/.ssh/*_rsa)
+    fi
+fi
+
+# Setup Golnag path
+export PATH=$PATH:/usr/local/go/bin
+
+# Install nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Setup SDKman
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
