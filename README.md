@@ -31,26 +31,19 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 sudo apt install zsh fortune
 ```
 - Install ohmyzsh from here: https://github.com/ohmyzsh/ohmyzsh
+- Add all contents of the  .oh-my-zsh in this repo to the home directory
 - Now we have to add custom plugins too!
 - Install zsh-autosuggestions from here: 
   - add it to the plugins list in .zshrc
-  - add custom settings to this path: ```~/.oh-my-zsh/custom/auto-suggest.sh
-```
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=yellow,bg=black"
-```
 - Install zsh-syntax-highlighting from here: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
-    - add it to the plugins list in .zshrc
-- Disable automatic fortune in each line in the adben font directory
+  - add it to the plugins list in .zshrc
+- In the end copy the .zshrc file to home directory.
+
 ```
-echo 'PROMPT="${RED_START}\$(prompt_context)${PR_BRIGHT_YELLOW}%~${PR_RESET}
-${GREEN_START} "' >> ~/.oh-my-zsh/themes/adben.zsh-theme
+# Install oh-my-zsh first then run these
+cp -r .oh-my-zsh/* ~/.oh-my-zsh/
+cp .zshrc ~/
 ```
-vim ~/.oh-my-zsh/themes/
-# change the line that says
-# 
-#
-```
-In the end copy the .zshrc file to home directory.
 
 
 ## Neovim
