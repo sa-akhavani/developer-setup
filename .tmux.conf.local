@@ -13,7 +13,6 @@
 #   - false (default)
 tmux_conf_preserve_stock_bindings=false
 
-# hello!
 # -- session creation ----------------------------------------------------------
 
 # prompt for session name when creating a new session, possible values are:
@@ -274,8 +273,8 @@ tmux_conf_theme_right_separator_sub="|"
 # cpu_and_ram=#(/home/ali/.tmux/plugins/tmux-mem-cpu-load/tmux-mem-cpu-load)
 tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
 # tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{mem_cpu_load},#{cpu_temp}|#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{mem_cpu_load},#{cpu_temp} | #{spotify_status} #{spotify_track} | %R, %d %b | #{username}#{root} | #{hostname} "
-
+# tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{mem_cpu_load},#{cpu_temp}|#{spotify_status} #{spotify_track}|%R,%d%b| #{username}#{root} |#{hostname} "
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{mem_cpu_load} | #{spotify_status} #{spotify_track} | %R,%d%b | #{username}#{root} | #{hostname} "
 
 # status left style
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -422,7 +421,7 @@ tmux_conf_update_plugins_on_launch=true
 # by default, reloading the configuration will update tpm and all plugins
 #   - true (default)
 #   - false
-tmux_conf_update_plugins_on_reload=true
+tmux_conf_update_plugins_on_reload=false
 
 # by default, reloading the configuration will uninstall tpm and plugins when no
 # plugins are enabled
@@ -442,6 +441,13 @@ tmux_conf_uninstall_plugins_on_reload=false
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
 set -g @plugin 'jaclu/tmux-menus'
+
+set -g @plugin 'ofirgall/tmux-window-name'
+set -g @tmux_window_name_shells "['bash', 'fish', 'sh', 'zsh']"
+set -g @tmux_window_dir_programs "['nvim', 'vim', 'vi', 'git']"
+set -g @tmux_window_name_max_name_len "20"
+set -g @tmux_window_name_use_tilde "True"
+
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-yank'
@@ -485,7 +491,7 @@ set-option -g set-clipboard on # prefix + y, Y, Enter, mouse selection, or line 
 #   sleep 5
 # }
 # mem_cpu_load() {
-#   $TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load -c -q -m 0 -a 0
+#   $TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load -c -q -m 0 -a 0 -g 0 -c
 #   sleep 5
 # }
 #
