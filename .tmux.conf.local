@@ -448,7 +448,6 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-yank'
 set -g @plugin 'thewtex/tmux-mem-cpu-load'
 set -g @plugin 'tmux-plugins/tmux-logging'
-set -g @plugin 'robhurring/tmux-spotify'
 
 set -g @continuum-restore 'on'
 set -g @continuum-save-interval '10' # save tmux environment every 10 minutes
