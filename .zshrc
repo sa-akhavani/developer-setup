@@ -68,7 +68,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git web-search zsh-autosuggestions)
+plugins=(git web-search zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -101,8 +101,6 @@ alias vim="nvim"
 
 # Run fortune on each session
 fortune
-# source /home/ali/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 
 # Environment variables
 export EDITOR="nvim"
