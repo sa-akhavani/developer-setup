@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gs="git status"
 alias vim="nvim"
+alias t="tmux"
 
 # Run fortune on each session
 fortune

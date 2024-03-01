@@ -21,7 +21,6 @@
 
 # The prompt
 
-# PROMPT='%{$fg[yellow]%}[%c] %{$reset_color%}'
 PROMPT='%{$fg[yellow]%}[%~] %{$reset_color%}'
 
 # The right-hand prompt
