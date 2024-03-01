@@ -40,6 +40,7 @@ config.initial_rows = 25
 
 -- config.color_scheme = 'AdventureTime'
 config.color_scheme = "OneDark"
+config.window_background_opacity = 0.97
 config.color_schemes = {
   ["OneDark"] = {
     foreground = "#f0f6fc",
