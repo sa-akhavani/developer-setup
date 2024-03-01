@@ -277,7 +277,8 @@ tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d
 tmux_conf_theme_status_right=" #{pomodoro_status}#{prefix}#{mouse}#{pairing}#{synchronized}#{mem_cpu_load} | #{spotify_status} #{spotify_track} | %R,%d%b | #{username}#{root} | #{hostname} "
 
 # pomodoro plugin config!
-set -g @pomodoro_on "  "                      # The formatted output when the Pomodoro is running
+set -g @pomodoro_on "  "
+# set -g @pomodoro_on "  "                      # U+E002 # The formatted output when the Pomodoro is running
 set -g @pomodoro_complete " ✔︎ "                 # The formatted output when the break is running
 set -g @pomodoro_pause " ⏸︎ "                    # The formatted output when the Pomodoro/break is paused
 set -g @pomodoro_prompt_break " ⏲︎ break? "      # The formatted output when waiting to start a break
