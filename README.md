@@ -2,9 +2,19 @@
 
 My full developer setup and dotfiles. I use this setup for my work as a software
 engineer and for my devops work setup. I went through HOURS of pain to come up with
-this setup so you don't have to! Here are the tools and environments that I use: - KDE Plasma - Conveniet less bloated linux desktop environment with easier
-customizations than GNOME - Wezterm - GPU-Accelared cross-platform terminal emulator that supports font ligatures - Tmux - Highly customizable terminal multiplexer - ZSH - Unix shell with tons of quality of life features. - Neovim - vim based editor with thousands of plugins and features - I spent a lot of time coming up with something that is not bloated but
-a ton of features and am very proud of this config.
+this setup so you don't have to! Here are the tools and environments that I use:
+- KDE Plasma
+    - Conveniet less bloated linux desktop environment with easier
+customizations than GNOME
+- Wezterm
+    - GPU-Accelared cross-platform terminal emulator that supports font ligatures
+- Tmux
+    - Highly customizable terminal multiplexer
+- ZSH
+    - Unix shell with tons of quality of life features.
+- Neovim
+    - Vim based editor with thousands of plugins and features
+    - I spent a lot of time coming up with something that is not bloated but a ton of features and am very proud of this config.
 
 I should read this:
 https://www.bugsnag.com/blog/tmux-and-vim/
@@ -63,9 +73,8 @@ cp ./.wezterm.lua ~/
 ```
 
 ## Tmux
-
-    - Note that at Tmux 3.x+ is required so all plugins could work!
-    - We use oh-my-tmux as a base config and customize it later.
+- Tmux 3.x+ is required. 
+- We use oh-my-tmux as a base config and customize it later.
 
 ```bash
 sudo apt install g++ cmake perl sed python3-pip xsel xclip
