@@ -6,7 +6,7 @@ local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
 local fonts = {
- "FiraCode Nerd Font Ret",
+ "FiraCode Nerd Font",
  -- "Mono",
 }
 local emoji_fonts = { "Apple Color Emoji" }

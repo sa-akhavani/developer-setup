@@ -11,11 +11,11 @@ sudo apt install curl wget g++ cmake
 mkdir ~/.local/share/fonts/
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip -O /tmp/FiraCode.zip
 unzip /tmp/FiraCode.zip -d /tmp/FiraCode
-mv /tmp/FiraCode/FiraCodeNerdFont-Retina.ttf ~/.local/share/fonts/
+mv /tmp/FiraCode/FiraCodeNerdFont-* ~/.local/share/fonts/
 wget https://github.com/samuelngs/apple-emoji-linux/releases/latest/download/AppleColorEmoji.ttf -O /tmp/AppleColorEmoji.ttf
 cp /tmp/AppleColorEmoji.ttf ~/.local/share/fonts
 fc-cache -f -v # clear and regenerate font cache
-fc-list | grep "FiraCode Nerd Font Ret" # confirming installation
+fc-list | grep "FiraCode Nerd Font" # confirming installation
 fc-list | grep "AppleColorEmoji" # confirming installation
 rm -r /tmp/FiraCode*
 rm -r /tmp/AppleColorEmoji*
