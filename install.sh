@@ -37,7 +37,7 @@ sudo apt install tmux
 pip install --user libtmux
 # Installing Oh-My-Tmux
 git clone https://github.com/gpakosz/.tmux.git ~/.tmux/
-ln -s -f ~/.tmux/.tmux.conf
+ln -s -f ~/.tmux/.tmux.conf ~/
 cp ~/.tmux/.tmux.conf.local ~/
 # Installing Tmux Plugin Manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -50,9 +50,7 @@ sudo apt install zsh fortune
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o omzsh.sh
 chmod +x ./omzsh.sh
 RUNZSH=no ./omzsh.sh
-pwd
-pwd
-rm ./omzsh.zsh
+rm ./omzsh.sh
 # Install Custom Plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -66,6 +64,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ####
 cp .zshrc ~/
 cp .wezterm.lua ~/
-cp .tmux.conf.local
-cp -r ./.oh-my-zsh/zshrc ~/
+cp .tmux.conf.local ~/
+cp -r .oh-my-zsh/custom/* ~/.oh-my-zsh/custom/
+# cp -r .oh-my-zsh/themes/* ~/.oh-my-zsh/custom/themes/
 wezterm
