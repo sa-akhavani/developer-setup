@@ -9,16 +9,17 @@ sudo apt install curl wget g++ cmake
 # Installing Fonts
 ####
 mkdir ~/.local/share/fonts/
-cd /tmp
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
-unzip FiraCode.zip -d FiraCode
-mv ./FiraCode/FiraCodeNerdFont-Retina.ttf ~/.local/share/fonts/
-rm -r /tmp/FiraCode*
-wget https://github.com/samuelngs/apple-emoji-linux/releases/latest/download/AppleColorEmoji.ttf
-cp ./AppleColorEmoji.ttf ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip -O /tmp/FiraCode.zip
+unzip /tmp/FiraCode.zip -d /tmp/FiraCode
+mv /tmp/FiraCode/FiraCodeNerdFont-Retina.ttf ~/.local/share/fonts/
+wget https://github.com/samuelngs/apple-emoji-linux/releases/latest/download/AppleColorEmoji.ttf -O /tmp/AppleColorEmoji.ttf
+cp /tmp/AppleColorEmoji.ttf ~/.local/share/fonts
 fc-cache -f -v # clear and regenerate font cache
-fc-list | grep "FiraCode" # confirming installation
+fc-list | grep "FiraCode Nerd Font Ret" # confirming installation
 fc-list | grep "AppleColorEmoji" # confirming installation
+rm -r /tmp/FiraCode*
+rm -r /tmp/AppleColorEmoji*
+
 
 ####
 # WezTerm
@@ -35,30 +36,36 @@ sudo apt install g++ cmake perl sed python3-pip xsel xclip
 sudo apt install tmux
 pip install --user libtmux
 # Installing Oh-My-Tmux
-cd ~
-git clone https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf
-cp .tmux/.tmux.conf.local .
+git clone https://github.com/gpakosz/.tmux.git ~/.tmux/
+ln -s -f ~/.tmux/.tmux.conf
+cp ~/.tmux/.tmux.conf.local ~/
 # Installing Tmux Plugin Manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ####
 # ZSH
 ####
-```bash
 sudo apt install zsh fortune
 # Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -o omzsh.sh
+chmod +x ./omzsh.sh
+RUNZSH=no ./omzsh.sh
+pwd
+pwd
+rm ./omzsh.zsh
 # Install Custom Plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
+
 ####
 # Neovim
 ####
 
-
 ####
 # Copy Configurations
 ####
-cp -r ./* ~/
+cp .zshrc ~/
+cp .wezterm.lua ~/
+cp .tmux.conf.local
+cp -r ./.oh-my-zsh/zshrc ~/
+wezterm
