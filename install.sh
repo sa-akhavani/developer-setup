@@ -62,6 +62,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ####
 # Copy Configurations
 ####
+# Backup current configs
+cp ~/.zshrc ~/.zshrc.backup
+cp ~/.wezterm.lua ~/.wezterm.lua.backup
+cp ~/.tmux.conf ~/.tmux.conf.backup
+# Copy New Configs
 cp .zshrc ~/
 cp .wezterm.lua ~/
 cp .tmux.conf.local ~/
