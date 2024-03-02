@@ -277,12 +277,11 @@ tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d
 tmux_conf_theme_status_right=" #{pomodoro_status}#{prefix}#{mouse}#{pairing}#{synchronized}#{mem_cpu_load} | #{spotify_status} #{spotify_track} | %R,%d%b | #{username}#{root} | #{hostname} "
 
 # pomodoro plugin config!
-set -g @pomodoro_on "  "
-# set -g @pomodoro_on "  "                      # U+E002 # The formatted output when the Pomodoro is running
+set -g @pomodoro_on "  "                    	# The formatted output when the Pomodoro is running
 set -g @pomodoro_complete " ✔︎ "                 # The formatted output when the break is running
-set -g @pomodoro_pause " ⏸︎ "                    # The formatted output when the Pomodoro/break is paused
-set -g @pomodoro_prompt_break " ⏲︎ break? "      # The formatted output when waiting to start a break
-set -g @pomodoro_prompt_pomodoro " ⏱︎ start? "   # The formatted output when waiting to start a Pomodoro
+set -g @pomodoro_pause " 󰏨 "                    # The formatted output when the Pomodoro/break is paused
+set -g @pomodoro_prompt_break " 󰔟 break? "      # The formatted output when waiting to start a break
+set -g @pomodoro_prompt_pomodoro " 󱫤 start? "   # The formatted output when waiting to start a Pomodoro
 set -g @pomodoro_notifications 'on'           # Enable desktop notifications from your terminal
 set -g @pomodoro_granularity 'on'              # real-time countdown!
 
@@ -294,7 +293,7 @@ tmux_conf_theme_status_left_attr="bold,none,none"
 # status right style
 tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_17,$tmux_conf_theme_colour_1,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
 tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_20,$tmux_conf_theme_colour_9,$tmux_conf_theme_colour_16,$tmux_conf_theme_colour_17"
-tmux_conf_theme_status_right_attr="none,none,none,bold,bold"
+tmux_conf_theme_status_right_attr="none,none,bold,bold,bold"
 
 # pairing indicator
 tmux_conf_theme_pairing="⚇"                 # U+2687
@@ -451,12 +450,14 @@ tmux_conf_uninstall_plugins_on_reload=false
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
 
+# Window Plugin Configurations
 set -g @plugin 'ofirgall/tmux-window-name'
 set -g @tmux_window_name_shells "['bash', 'fish', 'sh', 'zsh']"
 set -g @tmux_window_dir_programs "['nvim', 'vim', 'vi', 'git']"
 set -g @tmux_window_name_max_name_len "20"
 set -g @tmux_window_name_use_tilde "True"
 
+# My Custom Added Plugins
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'tmux-plugins/tmux-yank'
@@ -466,11 +467,17 @@ set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'jaclu/tmux-menus'
 set -g @plugin 'olimorris/tmux-pomodoro-plus'
 
+# More Custom Configurations
 set -g @continuum-restore 'on'
 set -g @continuum-save-interval '10' # save tmux environment every 10 minutes
 # set -g @menus_trigger '<prefix> C-g'                # trigger the menu with <prefix> V
 set-option -g set-clipboard on # prefix + y, Y, Enter, mouse selection, or line yank feature!
 set -g status-interval 1                       # Refresh the status line every second
+
+# Do not display the original window’s name when renaming it via Prefix + ,.
+bind , command-prompt -p "(rename-window '#W')" "rename-window '%%'"
+# Do the same for session names (Prefix + $):
+bind '$' command-prompt -p "(rename-session '#S')" "rename-session '%%'"
 
 # -- custom variables ----------------------------------------------------------
 
