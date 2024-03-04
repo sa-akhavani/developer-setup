@@ -71,5 +71,6 @@ cp .zshrc ~/
 cp .wezterm.lua ~/
 cp .tmux.conf.local ~/
 cp -r .oh-my-zsh/custom/* ~/.oh-my-zsh/custom/
-# cp -r .oh-my-zsh/themes/* ~/.oh-my-zsh/custom/themes/
+
+# Lunch WezTerm
 wezterm
