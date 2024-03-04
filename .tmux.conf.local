@@ -34,7 +34,7 @@ tmux_conf_new_session_retain_current_path=false
 #   - true
 #   - false (default)
 #   - disabled (do not modify new-window bindings)
-tmux_conf_new_window_retain_current_path=true
+tmux_conf_new_window_retain_current_path=false
 
 # new window tries to reconnect ssh sessions, possible values are:
 #   - true
@@ -385,7 +385,7 @@ tmux_conf_copy_to_os_clipboard=true
 # this is the place to override or undo settings
 
 # increase history size
-#set -g history-limit 50000
+set -g history-limit 50000
 
 # start with mouse mode enabled
 set -g mouse on
@@ -480,7 +480,7 @@ bind , command-prompt -p "(rename-window '#W')" "rename-window '%%'"
 # Do the same for session names (Prefix + $):
 bind '$' command-prompt -p "(rename-session '#S')" "rename-session '%%'"
 
-Change pomodoro restart button to R
+# Change pomodoro restart button to R
 set -g @pomodoro_restart "R"
 
 # -- custom variables ----------------------------------------------------------
