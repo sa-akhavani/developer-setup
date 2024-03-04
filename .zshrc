@@ -101,8 +101,6 @@ alias gs="git status"
 alias vim="nvim"
 alias t="tmux"
 
-# Run fortune on each session
-fortune
 
 # Environment variables
 export EDITOR="nvim"
@@ -146,3 +144,5 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
+# Run fortune on each session
+fortune

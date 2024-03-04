@@ -452,10 +452,6 @@ tmux_conf_uninstall_plugins_on_reload=false
 
 # Window Plugin Configurations
 set -g @plugin 'ofirgall/tmux-window-name'
-set -g @tmux_window_name_shells "['bash', 'fish', 'sh', 'zsh']"
-set -g @tmux_window_dir_programs "['nvim', 'vim', 'vi', 'git']"
-set -g @tmux_window_name_max_name_len "20"
-set -g @tmux_window_name_use_tilde "True"
 
 # My Custom Added Plugins
 set -g @plugin 'tmux-plugins/tmux-resurrect'
@@ -466,6 +462,12 @@ set -g @plugin 'tmux-plugins/tmux-logging'
 set -g @plugin 'jaclu/tmux-menus'
 set -g @plugin 'olimorris/tmux-pomodoro-plus'
 
+# Window-name-plugin config
+set -g @tmux_window_name_shells "['bash', 'fish', 'sh', 'zsh']"
+set -g @tmux_window_dir_programs "['nvim', 'vim', 'vi', 'git']"
+set -g @tmux_window_name_max_name_len "20"
+set -g @tmux_window_name_use_tilde "True"
+
 # More Custom Configurations
 set -g @continuum-restore 'on'
 set -g @continuum-save-interval '10' # save tmux environment every 10 minutes
@@ -473,6 +475,8 @@ set -g @continuum-save-interval '10' # save tmux environment every 10 minutes
 
 set-option -g set-clipboard on # prefix + y, Y, Enter, mouse selection, or line yank feature!
 set -g status-interval 1                       # Refresh the status line every second
+setw -g automatic-rename off    # rename window to reflect current program
+
 
 # Do not display the original window’s name when renaming it via Prefix + ,.
 bind , command-prompt -p "(rename-window '#W')" "rename-window '%%'"
