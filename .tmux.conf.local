@@ -471,6 +471,7 @@ set -g @plugin 'olimorris/tmux-pomodoro-plus'
 set -g @continuum-restore 'on'
 set -g @continuum-save-interval '10' # save tmux environment every 10 minutes
 # set -g @menus_trigger '<prefix> C-g'                # trigger the menu with <prefix> V
+
 set-option -g set-clipboard on # prefix + y, Y, Enter, mouse selection, or line yank feature!
 set -g status-interval 1                       # Refresh the status line every second
 
@@ -478,6 +479,9 @@ set -g status-interval 1                       # Refresh the status line every s
 bind , command-prompt -p "(rename-window '#W')" "rename-window '%%'"
 # Do the same for session names (Prefix + $):
 bind '$' command-prompt -p "(rename-session '#S')" "rename-session '%%'"
+
+Change pomodoro restart button to R
+set -g @pomodoro_restart "R"
 
 # -- custom variables ----------------------------------------------------------
 
