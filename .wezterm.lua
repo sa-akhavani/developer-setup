@@ -4,6 +4,10 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+
+-- Enable this on Windows only
+-- config.default_domain = 'WSL:Ubuntu-18.04'
+
 -- This is where you actually apply your config choices
 local fonts = {
 	"FiraCode Nerd Font",
