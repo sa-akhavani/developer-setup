@@ -33,7 +33,7 @@ setup each tool separately.
 ## General Requirements
 
 ```bash
-sudo apt install curl wget g++ cmake
+sudo apt install curl wget g++ cmake unzip
 ```
 
 ## Fonts
