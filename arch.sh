@@ -2,7 +2,7 @@
 # https://wiki.archlinux.org/title/Iwd
 
 # Conenct to internet
-# nmcli
+# nmcli --ask dev wifi connect ssid_name
 
 # Installing dependencies and packages
 
@@ -16,6 +16,7 @@ sudo pacman -S fzf neovim
 
 # Shell
 pacman -S fish-shell
+chsh -s /usr/bin/fish # change default shell
 
 # Prompt Theme Engine
 pacman -S starship
@@ -37,6 +38,7 @@ yay -S thunar yazi
 
 # System info
 pacman -S neofetch btop
+# yay -S nitch
 pacman -S conky
 
 
