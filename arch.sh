@@ -1,8 +1,31 @@
+####
 # Setting up wifi during installation:
 # https://wiki.archlinux.org/title/Iwd
+##
+# Using iwd
+# change /etc/iwd/main.conf
+# iwctl
+# device list
+# station <station_name> scan
+# station <station_name> get-networks
+# if you want to connect to a 8021x security network do the next 3 steps.
+# if not, jump to last line
+# exit iwctl
+# add ssid setting in /var/lib/iwd/<SSID.security>
+# iconv -t utf16le | openssl md4 -provider legacy # hash your password
+# iwctl
+# station <station_name> connect <ssid>
+#
+##
+## connect to internet after install using nmcli:
+# nmcli --ask device wifi connect <ssid>
+####
 
-# Conenct to internet
-# nmcli --ask dev wifi connect ssid_name
+####
+# Network Manager
+###
+sudo pacman -S network-manager-applet
+
 
 ####
 # Installing dependencies and useful packages
@@ -106,19 +129,34 @@ sudo pacman -S fuzzel
 # File Managers 
 ## set binding in Hyprland conf later
 ####
-yay -S thunar yazi
-
+sudo pacman -S thunar gvfs thunar-archive-plugin file-roller
+sudo pacman -S yazi
 
 # System info
 sudo pacman -S neofetch btop
 # yay -S nitch
 # sudo pacman -S conky
 
+####
+# Screenshot - Grom + Slurp + Swappy
+####
+sudo pacman -S grim slurp swappy
 
-# Screenshot
-sudo pacman -S grim slurp
 
+####
+# Logout Menu
+####
+yay -S wlogout
+
+####
+# Lock Screen
+####
+sudo pacman -S hyprlock
+
+
+####
 # Wallpaper manager
+####
 sudo pcaman -S swww
 
 
@@ -147,6 +185,11 @@ sudo usermod -aG input $USER # Waybar module for keyboard status needs this
 sudo pacman -S waybar
 
 
+####
+# Color picker
+####
+yay -S hyprpicker-git
+
 
 ####
 # Nerd Font + Apple Emoji
@@ -161,6 +204,28 @@ yay -S ttf-apple-emoji
 # fc-cache -f -v # clear and regenerate font cache
 # fc-list | grep "FiraCode Nerd Font" # confirming installation
 # fc-list | grep "AppleColorEmoji" # confirming installation
+
+
+####
+# Persian Standard Keyboard 
+# Persian Font in terminal
+####
+sudo pacman -S bicon-git iranian-fonts
+yay -S xkb-switch
+yay -S vazir-code-fonts
+
+
+####
+# Break Reminder
+####
+yay -S ianny-git
+
+
+####
+# Fun
+####
+sudo pacman -S tmux
+yay -S pipes.sh
 
 
 ####
