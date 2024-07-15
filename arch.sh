@@ -31,6 +31,7 @@ sudo pacman -S network-manager-applet
 # Installing dependencies and useful packages
 ####
 sudo pacman -S git base-devel lsd
+sudo pacman -S cmake make gcc
 sudo pacman -S fzf
 
 
@@ -55,7 +56,7 @@ sudo pacman -S kitty
 ####
 # Shell - Fish + Starship
 ####
-sudo pacman -S fish-shell
+sudo pacman -S fish
 chsh -s /usr/bin/fish # change default shell
 # Prompt Theme Engine
 sudo pacman -S starship
@@ -200,6 +201,7 @@ yay -S hyprpicker-git
 #
 ####
 sudo pacman -S ttf-firacode-nerd
+sudo pacman -S ttf-liberation
 yay -S ttf-apple-emoji
 # fc-cache -f -v # clear and regenerate font cache
 # fc-list | grep "FiraCode Nerd Font" # confirming installation
@@ -224,7 +226,7 @@ yay -S ianny-git
 ####
 # Fun
 ####
-sudo pacman -S tmux
+sudo pacman -S cmatrix
 yay -S pipes.sh
 
 
@@ -239,3 +241,4 @@ yay -S spotify-launcher
 
 # Telegram Messanger
 yay -S telegram-desktop
+
