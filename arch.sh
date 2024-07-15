@@ -30,15 +30,15 @@ sudo pacman -S network-manager-applet
 ####
 # Installing dependencies and useful packages
 ####
-sudo pacman -S git base-devel lsd
+sudo pacman -S git base-devel
 sudo pacman -S cmake make gcc
-sudo pacman -S fzf
+sudo pacman -S fzf lsd
 
 
 ####
 # AUR package manager - Yay
 ####
-sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 
 ####
@@ -77,8 +77,8 @@ sudo pacman -S neovim
 ####
 # Install Display Manager (SDDM)
 ####
-yay -S sddm
-sudo systemctl enable sddm
+# yay -S sddm
+# sudo systemctl enable sddm
 
 
 ####

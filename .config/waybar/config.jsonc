@@ -54,7 +54,6 @@
   },
   "custom/color-picker": {
     "format": " 󰌁 ",
-    // "tooltip": false,
     "on-click": "hyprpicker -a"
   },
 }
