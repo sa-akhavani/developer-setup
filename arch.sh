@@ -256,7 +256,10 @@ yay -S pipes.sh
 sudo pacman -S firefox
 
 # Spotify
-yay -S spotify-launcher
+yay -S spotify   # Official Client
+# yay -S spotify-launcher
+pacman -S ncspot # Command Line Unofficial Client
+
 
 # Telegram Messanger
 yay -S telegram-desktop
