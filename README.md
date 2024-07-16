@@ -39,6 +39,7 @@ git clone https://github.com/sa-akhavani/dotfiles.git && cd dotfiles
 chmod +x ./arch.sh
 ./arch.sh
 cp -r ./.config/* ~/.config/
+cp -r ./etc/* /etc/
 ```
 
 ## Setup
