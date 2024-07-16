@@ -42,9 +42,17 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 
 ####
-# Audio
+# Audio - Pipewire + Wireplumber + Coppwr + EasyEffects + Pulsemixer
+# Pulsemixer is meant for pulseaudio but works well with pipewire too!
+# https://github.com/mikeroyal/PipeWire-Guide
+# https://gitlab.freedesktop.org/rncbc/qpwgraph
+# https://gitlab.freedesktop.org/pipewire/helvum
+# https://github.com/saivert/pwvucontrol
+# Another option is qpwgraph OR Helvum
+# Also check pwvucontrol
 ####
 sudo pacman -S pipewire wireplumber
+sudo pacman -S coppwr easyeffects pulsemixer
 
 
 ####
@@ -92,13 +100,11 @@ sudo pacman -S neovim
 
 
 ####
-# Bluetooth
+# Bluetooth (bluez + blueman (gui))
 # https://wiki.archlinux.org/title/Bluetooth
 # Check with "rfkill" command that nothing is blocked
 ####
-sudo pacman -S bluez bluez-utils
-# Bluetooth Graphic Interface
-sudo pacman -S blueman
+sudo pacman -S bluez bluez-utils blueman
 
 
 ####
@@ -109,11 +115,10 @@ yay -S xdg-desktop-portal-hyprland-git
 
 
 ####
-# Wayland Clipboard
+# Wayland Clipboard - wl-clipboard
+# Clipboard Manager - cliphist
 ####
-sudo pacman -S wl-clipboard
-# Clipboard Manager
-sudo pacman -S cliphist
+sudo pacman -S wl-clipboard cliphist
 
 
 ####
@@ -217,15 +222,13 @@ yay -S ttf-apple-emoji
 # fc-list | grep "FiraCode Nerd Font" # confirming installation
 # fc-list | grep "AppleColorEmoji" # confirming installation
 
-
 ####
-# Persian Standard Keyboard 
-# Persian Font in terminal
+# Persian Fonts
 ####
-sudo pacman -S bicon-git iranian-fonts
-yay -S xkb-switch
+# sudo pacman -S bicon-git iranian-fonts
+# yay -S xkb-switch
+yay -S vazirmatn-fonts
 yay -S vazir-code-fonts
-
 
 ####
 # Break Reminder
