@@ -1,110 +1,108 @@
 # My Developr Setup Dotfiles
-My full developer setup and dotfiles. I use this setup for my work as a software
-engineer and for my devops work setup.
-My goal is to come up with a setup that is fast, not bloated, and has all the
-necessary features, while it is beautiful.
 
-I went through HOURS of pain to come up with
-this setup so you don't have to! Here are the tools and environments that I use:
-
+Welcome to my GitHub repository where I share my developer setup and dotfiles.
+I've designed this environment to be fast, minimal, and feature-packed, yet aesthetically pleasing.
+I have optimized this setup for my software engineering and devops projects.
+I went through HOURS of pain to come up with this config so you don't have to!
 
 ## Overview
 
-| **Entity Type**     |                                                                **Entity Name**                                                                 |
-| :------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------: |
-| OS                  |                                                     [Arch Linux](https://archlinux.org/)                                                     |
-| Terminal            |                                                  [kitty](https://github.com/kovidgoyal/kitty)                                                  |
-| Terminal Multiplexer|                                                  [tmux](https://github.com/tmux/tmux)                                                  |
-| Text Editor         |                                                   [nvim](https://github.com/neovim/neovim)                                                     |
-| Shell               |                                             [fish-shell](https://github.com/fish-shell/fish-shell)                                             |
-| Promp Theme Engine  |                                                [starship](https://github.com/starship/starship)                                                |
-| Compositor (Window Manager)      |                                                     [Hyprland](https://github.com/hyprwm/Hyprland)                                                     |
-| Display Manager (Greeter)     |                                                     [ly](https://github.com/fairyglade/ly)                                                     |
-| Notification Deamon |                                         [Mako](https://github.com/emersion/mako)                                         |
-| System Info Tool    |                     [neofetch](https://github.com/dylanaraps/neofetch) </br> [btop](https://github.com/aristocratos/btop)                      |
-| Screen Locker       |                                             [swaylock](https://github.com/mortie/swaylock) |
-| Status Bar          |                                                  [waybar](https://github.com/Alexays/Waybar)                                                   |
-| File Manager        |                          [yazi](https://github.com/sxyazi/yazi) </br> [thunar](https://github.com/xfce-mirror/thunar)                          |
-| App Launcher        |                                                   [fuzzel](https://codeberg.org/dnkl/fuzzel)                                                   |
+| **Tool / Environment**         | **Description**                                                                                           |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| **OS**                         | [Arch Linux](https://archlinux.org/): Lightweight, customizable, and perfect for fine-grained control.     |
+| **Terminal**                   | [kitty](https://github.com/kovidgoyal/kitty): GPU-accelerated, cross-platform terminal with a focus on speed. |
+| **Multiplexer**                | [tmux](https://github.com/tmux/tmux): Highly customizable terminal multiplexer.                            |
+| **Text Editor**                | [nvim](https://github.com/neovim/neovim): Powerful Vim-based editor with extensive plugin support.          |
+| **Shell**                      | [fish-shell](https://github.com/fish-shell/fish-shell): User-friendly command-line shell with autosuggestions and syntax highlighting. |
+| **Prompt Theme**               | [starship](https://github.com/starship/starship): Minimal, blazing-fast prompt for any shell.              |
+| **Window Manager**             | [Hyprland](https://github.com/hyprwm/Hyprland): Lightweight and highly customizable Wayland tiling window manager. |
+| **Display Manager**            | [ly](https://github.com/fairyglade/ly): Lightweight and minimal display manager.                           |
+| **Notification Daemon**        | [Mako](https://github.com/emersion/mako): Lightweight and customizable notification daemon for Wayland.     |
+| **System Info Tools**          | [neofetch](https://github.com/dylanaraps/neofetch), [btop](https://github.com/aristocratos/btop): Tools for system information and monitoring. |
+| **Screen Locker**              | [swaylock](https://github.com/mortie/swaylock): Secure and simple Wayland screen locker.                   |
+| **Status Bar**                 | [waybar](https://github.com/Alexays/Waybar): Highly customizable Wayland status bar.                       |
+| **File Manager**               | [yazi](https://github.com/sxyazi/yazi), [thunar](https://github.com/xfce-mirror/thunar): File management tools. |
+| **App Launcher**               | [fuzzel](https://codeberg.org/dnkl/fuzzel): Fast and efficient application launcher.                       |
 <!-- | Icon Theme          |                                               [Flatery Dark](https://github.com/cbrnix/Flatery)                                                | -->
 
+## Installation
 
+To replicate my setup:
 
-## OS
-### Arch Linux
-I was an Ubuntu user for a long time (7+ years).
-I eventually decided to switch to arch to be able to control every single aspect of my os and also improve my linux knowledge.
-Also, it is less bloated than other distros.
-It's package manager and community is also insane.
-Needless to mention Arch Wiki, which is 
-
-## Display Manager
-### Ly
-I had tried both KDE and GNOME display managers in ubuntu and kubuntu before.
-but both of these are extremely bloated which made me decide to switch to something
-minimal as a display manager. So I chose Ly.
-
-## Window Manager
-### Hyprland
-Now that Wayland is becoming stable and lots of people are creating packages for it,
-I decided to use as much wayland-native environments as possible.
-Hyprland is an amazing tiling window manager for wayland and is highly customizable.
-Way better than Sway!
-
-## Terminal and Multiplexer
-### Wezterm
-GPU-Accelared cross-platform terminal emulator that supports font ligatures
-
-### Tmux
-Highly customizable terminal multiplexer
-
-### Kitty
-Alternative to Wezterm
-Cross-platform, fast, feature-rich, GPU based terminal.
-
-## Shell and Prompt Engine
-### Fish
-Smart and user-friendly command line shell.
-Includes syntax highlighting, autosuggest-as-you-type, fancy tab completions
-
-### Starship
-Minimal, blazing-fast, and customizable prompt for any shell! 
-
-### ZSH
-Alternative to Fish
-Unix shell with tons of quality of life features.
-
-### Editor
-I mainly use Neovim but I also use other IDEs if I am working on a project with
-a huge codebase. I am not crazy :D
-### Neovim
-Vim based editor with thousands of plugins and features
-I spent a lot of time coming up with something that is not bloated but a ton of features and am very proud of this config.
-I should read this: https://www.bugsnag.com/blog/tmux-and-vim/
-
-## Misc
-### Spotify
-I ran into some problems setting up Spofify Client For Linux so i write some notes here.
-If NetworkManager is running but you are connected using iwd
-Spotify won't work!
-
-Toggle offline mode by pressing Ctrl-Shift-o
-https://community.spotify.com/t5/Desktop-Linux/How-do-I-switch-to-offline-mode-with-no-File-menu/m-p/1577765#M3528
-
-Useful:
-https://wiki.archlinux.org/title/Spotify
-
-Alternative:
-https://github.com/kpcyrd/spotify-launcher
-
-
-# Installation
-After installing arch (desktop profile):
-
+1. **Install Arch Linux**: Follow the [official installation guide](https://wiki.archlinux.org/title/Installation_guide) for desktop profiles.
+2. **Clone this repository**:
+3. **Run installation script**:
+4. **Copy repo config files to local config**:
 
 ```bash
+git clone https://github.com/sa-akhavani/dotfiles.git && cd dotfiles
 chmod +x ./arch.sh
 ./arch.sh
 cp -r ./.config/* ~/.config/
 ```
+
+## Setup
+
+### Arch Linux
+I was an Ubuntu user for a long time (7+ years).
+I eventually decided to migrate to Arch Linux to be able to control every single aspect of my os and also improve my linux knowledge.
+I love Arch's lightweight nature. Fits perfectly with my minimalistic approach.
+Arch's package manager, pacman, and AUR are a blessing! you have to use it to see
+how good this is!
+
+
+### Hyprland (Wayland)
+
+
+Now that Wayland is becoming stable and lots of people are creating packages for it,
+Hyprland is an amazing tiling window manager for wayland.
+It's highly customizablity and native Wayland support significantly enhance my workflow compared to traditional X11 setups.
+It's time to put X11 to rest.
+Also, it is better than Sway in my opinion.
+
+
+### Display Manager (Ly)
+I Have tried KDE and GNOME display managers in Ubuntu and Kubuntu
+But both of them are extremely bloated.
+So I chose `Ly` as my display manager, keeping everything minimal.
+
+
+## Shell and Prompt Engine (Fish, Starship, ZSH)
+### Fish
+- Fish: Smart and user-friendly command line shell. Includes syntax highlighting, autosuggest-as-you-type, fancy tab completions
+- Starship: Minimal, blazing-fast, and customizable prompt for any shell! 
+- ZSH (Alternative to Fish): Unix shell with tons of quality of life features.
+
+
+## Terminal and Multiplexer (Wezterm, Tmux, Kitty)
+### Wezterm
+- Wezterm: a GPU-Accelared cross-platform terminal emulator that supports font ligatures
+- Tmux: Highly customizable terminal multiplexer
+- Kitty (Alternative to Wezterm): Cross-platform, fast, feature-rich, GPU based terminal.
+
+
+### Editor (Neovim)
+- My go-to editor is Neovim, a Vim-based powerhouse equipped with thousands of plugins and features. It strikes a balance between functionality and efficiency that I'm proud to use.
+- I mainly use Neovim but I also use other IDEs if I am working on a project with a huge codebase. I am not crazy :D
+- I spent a lot of time coming up with something that is not bloated but a ton of features and am very proud of this config.
+
+
+## Misc
+
+
+### Neovim and Tmux
+I should read this: https://www.bugsnag.com/blog/tmux-and-vim/
+
+
+### Spotify (Linux)
+While setting up the Spotify client for Linux, I encountered a few quirks.
+If you're using NetworkManager with iwd together (don't do that:D),
+you have to stop NetworkManager service to be able to use spotify.
+
+Also, hyprland windows don't have a menu. bar. To toggle offline mode, you can press `Ctrl-Shift-o`.
+
+For more troubleshooting tips, check out these resources:
+- [Community Tips](https://community.spotify.com/t5/Desktop-Linux/How-do-I-switch-to-offline-mode-with-no-File-menu/m-p/1577765#M3528)
+- [Arch Linux Wiki](https://wiki.archlinux.org/title/Spotify)
+- [Alternative Spotify Launcher](https://github.com/kpcyrd/spotify-launcher)
 
