@@ -1,5 +1,20 @@
 # My Developer Setup
 
+## Spotify
+If NetworkManager is running but you are connected using iwd
+Spotify won't work!
+
+Toggle offline mode by pressing Ctrl-Shift-o
+https://community.spotify.com/t5/Desktop-Linux/How-do-I-switch-to-offline-mode-with-no-File-menu/m-p/1577765#M3528
+
+Useful:
+https://wiki.archlinux.org/title/Spotify
+
+Alternative:
+https://github.com/kpcyrd/spotify-launcher
+
+
+
 My full developer setup and dotfiles. I use this setup for my work as a software
 engineer and for my devops work setup. I went through HOURS of pain to come up with
 this setup so you don't have to! Here are the tools and environments that I use:
