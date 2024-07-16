@@ -230,6 +230,12 @@ yay -S ttf-apple-emoji
 yay -S vazirmatn-fonts
 yay -S vazir-code-fonts
 
+
+####
+# Icon theme - Papirus
+####
+yay -S papirus-icon-theme-git
+
 ####
 # Break Reminder
 ####
