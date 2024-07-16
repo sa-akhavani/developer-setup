@@ -68,7 +68,7 @@
 # For alsa 'source' will be the capture device.
 # For fifo 'source' will be the path to fifo-file.
 # For shmem 'source' will be /squeezelite-AA:BB:CC:DD:EE:FF where 'AA:BB:CC:DD:EE:FF' will be squeezelite's MAC address
-method = pipewire
+method = pulse
 source = auto
 
 ; method = pipewire
@@ -229,4 +229,3 @@ gradient_color_8 = '#ff9e66'
 ; 3 = 1 # midtone
 ; 4 = 1
 ; 5 = 1 # treble
-
