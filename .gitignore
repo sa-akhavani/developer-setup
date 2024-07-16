@@ -8,4 +8,5 @@ spotify
 systemd
 vlc
 xfce4
-
+.config/cava/shaders
+RaySession
