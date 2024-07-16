@@ -51,6 +51,8 @@ sudo pacman -S pipewire wireplumber
 # Xkeyboard config v2.42+ 
 # Very important to have updated and correct language signs such as ZWNJ
 # Zero Width Non-Joiner
+# Install with pacman or copy everything in the repo below to: /usr/share/X11/xkb
+# https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
 ####
 sudo pacman -S xkeyboard-config
 
