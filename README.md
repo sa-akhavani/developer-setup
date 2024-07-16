@@ -9,20 +9,20 @@ I went through HOURS of pain to come up with this config so you don't have to!
 
 | **Tool / Environment**         | **Description**                                                                                           |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| **OS**                         | [Arch Linux](https://archlinux.org/): Lightweight, customizable, and perfect for fine-grained control.     |
-| **Terminal**                   | [kitty](https://github.com/kovidgoyal/kitty): GPU-accelerated, cross-platform terminal with a focus on speed. |
-| **Multiplexer**                | [tmux](https://github.com/tmux/tmux): Highly customizable terminal multiplexer.                            |
-| **Text Editor**                | [nvim](https://github.com/neovim/neovim): Powerful Vim-based editor with extensive plugin support.          |
-| **Shell**                      | [fish-shell](https://github.com/fish-shell/fish-shell): User-friendly command-line shell with autosuggestions and syntax highlighting. |
-| **Prompt Theme**               | [starship](https://github.com/starship/starship): Minimal, blazing-fast prompt for any shell.              |
-| **Window Manager**             | [Hyprland](https://github.com/hyprwm/Hyprland): Lightweight and highly customizable Wayland tiling window manager. |
-| **Display Manager**            | [ly](https://github.com/fairyglade/ly): Lightweight and minimal display manager.                           |
-| **Notification Daemon**        | [Mako](https://github.com/emersion/mako): Lightweight and customizable notification daemon for Wayland.     |
-| **System Info Tools**          | [neofetch](https://github.com/dylanaraps/neofetch), [btop](https://github.com/aristocratos/btop): Tools for system information and monitoring. |
-| **Screen Locker**              | [swaylock](https://github.com/mortie/swaylock): Secure and simple Wayland screen locker.                   |
-| **Status Bar**                 | [waybar](https://github.com/Alexays/Waybar): Highly customizable Wayland status bar.                       |
-| **File Manager**               | [yazi](https://github.com/sxyazi/yazi), [thunar](https://github.com/xfce-mirror/thunar): File management tools. |
-| **App Launcher**               | [fuzzel](https://codeberg.org/dnkl/fuzzel): Fast and efficient application launcher.                       |
+| **OS**                         | [Arch Linux](https://archlinux.org/)     |
+| **Terminal**                   | [kitty](https://github.com/kovidgoyal/kitty) |
+| **Multiplexer**                | [tmux](https://github.com/tmux/tmux)                            |
+| **Text Editor**                | [nvim](https://github.com/neovim/neovim)          |
+| **Shell**                      | [fish-shell](https://github.com/fish-shell/fish-shell) |
+| **Prompt Theme**               | [starship](https://github.com/starship/starship)              |
+| **Window Manager**             | [Hyprland](https://github.com/hyprwm/Hyprland) |
+| **Display Manager**            | [ly](https://github.com/fairyglade/ly)                           |
+| **Notification Daemon**        | [Mako](https://github.com/emersion/mako)     |
+| **System Info Tools**          | [neofetch](https://github.com/dylanaraps/neofetch), [btop](https://github.com/aristocratos/btop) |
+| **Screen Locker**              | [swaylock](https://github.com/mortie/swaylock)                   |
+| **Status Bar**                 | [waybar](https://github.com/Alexays/Waybar)                       |
+| **File Manager**               | [yazi](https://github.com/sxyazi/yazi), [thunar](https://github.com/xfce-mirror/thunar) |
+| **App Launcher**               | [fuzzel](https://codeberg.org/dnkl/fuzzel)                       |
 <!-- | Icon Theme          |                                               [Flatery Dark](https://github.com/cbrnix/Flatery)                                                | -->
 
 ## Installation
