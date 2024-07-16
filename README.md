@@ -1,6 +1,90 @@
-# My Developer Setup
+# My Developr Setup Dotfiles
+My full developer setup and dotfiles. I use this setup for my work as a software
+engineer and for my devops work setup.
+My goal is to come up with a setup that is fast, not bloated, and has all the
+necessary features, while it is beautiful.
 
-## Spotify
+I went through HOURS of pain to come up with
+this setup so you don't have to! Here are the tools and environments that I use:
+
+
+## Overview
+
+| **Entity Type**     |                                                                **Entity Name**                                                                 |
+| :------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------: |
+| OS                  |                                                     [Arch Linux](https://archlinux.org/)                                                     |
+| Terminal            |                                                  [kitty](https://github.com/kovidgoyal/kitty)                                                  |
+| Terminal Multiplexer|                                                  [tmux](https://github.com/tmux/tmux)                                                  |
+| Text Editor         |                                                   [nvim](https://github.com/neovim/neovim)                                                     |
+| Shell               |                                             [fish-shell](https://github.com/fish-shell/fish-shell)                                             |
+| Promp Theme Engine  |                                                [starship](https://github.com/starship/starship)                                                |
+| Compositor (Window Manager)      |                                                     [Hyprland](https://github.com/hyprwm/Hyprland)                                                     |
+| Display Manager (Greeter)     |                                                     [ly](https://github.com/fairyglade/ly)                                                     |
+| Notification Deamon |                                         [Mako](https://github.com/emersion/mako)                                         |
+| System Info Tool    |                     [neofetch](https://github.com/dylanaraps/neofetch) </br> [btop](https://github.com/aristocratos/btop)                      |
+| Screen Locker       |                                             [swaylock](https://github.com/mortie/swaylock) |
+| Status Bar          |                                                  [waybar](https://github.com/Alexays/Waybar)                                                   |
+| File Manager        |                          [yazi](https://github.com/sxyazi/yazi) </br> [thunar](https://github.com/xfce-mirror/thunar)                          |
+| App Launcher        |                                                   [fuzzel](https://codeberg.org/dnkl/fuzzel)                                                   |
+<!-- | Icon Theme          |                                               [Flatery Dark](https://github.com/cbrnix/Flatery)                                                | -->
+
+
+
+## OS
+### Arch Linux
+I was an Ubuntu user for a long time (7+ years).
+I eventually decided to switch to arch to be able to control every single aspect of my os and also improve my linux knowledge.
+Also, it is less bloated than other distros.
+It's package manager and community is also insane.
+Needless to mention Arch Wiki, which is 
+
+## Display Manager
+### Ly
+I had tried both KDE and GNOME display managers in ubuntu and kubuntu before.
+but both of these are extremely bloated which made me decide to switch to something
+minimal as a display manager. So I chose Ly.
+
+## Window Manager
+### Hyprland
+Now that Wayland is becoming stable and lots of people are creating packages for it,
+I decided to use as much wayland-native environments as possible.
+Hyprland is an amazing tiling window manager for wayland and is highly customizable.
+Way better than Sway!
+
+## Terminal and Multiplexer
+### Wezterm
+GPU-Accelared cross-platform terminal emulator that supports font ligatures
+
+### Tmux
+Highly customizable terminal multiplexer
+
+### Kitty
+Alternative to Wezterm
+Cross-platform, fast, feature-rich, GPU based terminal.
+
+## Shell and Prompt Engine
+### Fish
+Smart and user-friendly command line shell.
+Includes syntax highlighting, autosuggest-as-you-type, fancy tab completions
+
+### Starship
+Minimal, blazing-fast, and customizable prompt for any shell! 
+
+### ZSH
+Alternative to Fish
+Unix shell with tons of quality of life features.
+
+### Editor
+I mainly use Neovim but I also use other IDEs if I am working on a project with
+a huge codebase. I am not crazy :D
+### Neovim
+Vim based editor with thousands of plugins and features
+I spent a lot of time coming up with something that is not bloated but a ton of features and am very proud of this config.
+I should read this: https://www.bugsnag.com/blog/tmux-and-vim/
+
+## Misc
+### Spotify
+I ran into some problems setting up Spofify Client For Linux so i write some notes here.
 If NetworkManager is running but you are connected using iwd
 Spotify won't work!
 
@@ -14,136 +98,13 @@ Alternative:
 https://github.com/kpcyrd/spotify-launcher
 
 
+# Installation
+After installing arch (desktop profile):
 
-My full developer setup and dotfiles. I use this setup for my work as a software
-engineer and for my devops work setup. I went through HOURS of pain to come up with
-this setup so you don't have to! Here are the tools and environments that I use:
-- KDE Plasma
-    - Conveniet less bloated linux desktop environment with easier
-customizations than GNOME
-- Wezterm
-    - GPU-Accelared cross-platform terminal emulator that supports font ligatures
-- Tmux
-    - Highly customizable terminal multiplexer
-- ZSH
-    - Unix shell with tons of quality of life features.
-- Neovim
-    - Vim based editor with thousands of plugins and features
-    - I spent a lot of time coming up with something that is not bloated but a ton of features and am very proud of this config.
-
-I should read this:
-https://www.bugsnag.com/blog/tmux-and-vim/
-
-## Easy Setup
-
-You can setup everythin by using the `install.sh` script in this repository. It will
-setup `Wezterm`, `Tmux`, `ZSH`, `Neovim`, and `FiraCode` nerd font for you.
-```bash
-sudo ./install.sh
-```
-
-If you do not want to install everything together, you could use other sections to
-setup each tool separately.
-
-## General Requirements
 
 ```bash
-sudo apt install curl wget g++ cmake unzip
+chmod +x ./arch.sh
+./arch.sh
+cp -r ./.config/* ~/.config/
 ```
 
-## Fonts
-
-### FiraCode nerd font!
-
-```bash
-cd /tmp
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
-unzip FiraCode.zip -d FiraCode
-mkdir ~/.local/share/fonts/
-mv /tmp/FiraCode/FiraCodeNerdFont-Retina.ttf ~/.local/share/fonts/
-fc-cache -f -v # clear and regenerate font cache
-fc-list | grep "FiraCode" # confirming installation
-rm -r /tmp/FiraCode*
-```
-
-### Apple Color Emoji
-
-```bash
-cd /tmp/
-wget https://github.com/samuelngs/apple-emoji-linux/releases/latest/download/AppleColorEmoji.ttf
-mkdir -p ~/.local/share/fonts/
-cp AppleColorEmoji.ttf ~/.local/share/fonts
-fc-cache -f -v # clear and regenerate font cache
-fc-list | grep "AppleColorEmoji" # confirming installation
-```
-
-## Wezterm
-
-```bash
-curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
-echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
-sudo apt update
-sudo apt install wezterm
-cp ./.wezterm.lua ~/
-```
-
-## Tmux
-- Tmux 3.x+ is required. 
-- We use oh-my-tmux as a base config and customize it later.
-
-```bash
-sudo apt install g++ cmake perl sed python3-pip xsel xclip
-# Installing both xclip and xsel is not necessary but for tmux-yank to work
-# one of them needs to be installed on your distro and one of them might not
-# work on your system
-sudo apt install tmux
-pip install --user libtmux
-
-# for enabling CPU temperature monitoring
-sudo apt install lm-sensors
-sudo sensors-detect
-sudo service kmod start
-
-# Installing Oh My Tmux
-cd ~
-git clone https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf
-cp .tmux/.tmux.conf.local .
-
-# Installing Tmux Plugin Manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# Copying Our custom tmux.conf file to home directory
-cp .tmux.conf.local ~/
-```
-
-## ZSH
-
-Installing ZSH and use oh-my-zsh as base config then we customize it.
-
-```bash
-sudo apt install zsh fortune
-# Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# Install Custom Plugins
-# zsh syntax highlihgting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# zsh autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# Copy our config files to home directory
-cp -r .oh-my-zsh/* ~/.oh-my-zsh/
-cp .zshrc ~/
-```
-
-## Neovim
-
-Installing neovim and configuring it.
-This part is WIP!
-
-```bash
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-./nvim.appimage
-sudo mkdir -p /opt/nvim
-sudo mv nvim.appimage /opt/nvim/nvim
-export PATH="$PATH:/opt/nvim/" #Add it to zshrc
-```
