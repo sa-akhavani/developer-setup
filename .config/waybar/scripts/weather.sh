@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-location1="Luleburgaz"
-location2="Istanbul"
+location1="Boston"
+location2="Tehran"
 error="Service Unavailable"
 
 get_weather() {

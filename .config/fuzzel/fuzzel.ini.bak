@@ -1,5 +1,7 @@
 [main]
+; font=Gabarito
 font=FiraCode Nerd Font SemiBold:size=10
+; dpi-aware=no
 fields=name,generic,comment,categories,filename,keywords
 terminal=foot -e
 prompt="  " 
@@ -28,6 +30,9 @@ exit-on-keyboard-focus-loss = yes
 radius=10
 width=1
 
+; [dmenu]
+; exit-immediately-if-empty=yes
+
 [colors]
 background=1a1b26ff
 text=a9b1d6ff
@@ -37,3 +42,11 @@ border=7aa2f7ff
 match=9ece6aff
 selection-match=9ece6aff
 
+; [colors]
+; background=1D1011ff
+; text=F7DCDEff
+; selection=574144ff
+; selection-text=DEBFC2ff
+; border=574144dd
+; match=FFB2BCff
+; selection-match=FFB2BCff
