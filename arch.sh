@@ -148,10 +148,13 @@ sudo pacman -S fuzzel
 sudo pacman -S thunar gvfs thunar-archive-plugin file-roller
 sudo pacman -S yazi
 
-# System info
-sudo pacman -S neofetch btop
-# yay -S nitch
-# sudo pacman -S conky
+
+####
+# System info - Fastfetch + Btop
+# Honorable mentions: conky - nitch
+####
+sudo pacman -S fastfetch btop
+
 
 ####
 # Screenshot - Grom + Slurp + Swappy
@@ -247,7 +250,8 @@ yay -S ianny-git
 ####
 sudo pacman -S cmatrix
 yay -S pipes.sh
-
+# yay -S libcava #libcava is needed for waybar
+yay -S cava
 
 ####
 # Applications
