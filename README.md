@@ -92,10 +92,7 @@ So I chose `Ly` as my display manager, keeping everything minimal.
 
 #### Waybar
 - [ ] Fix waybar keyboard layout change in multiple keyboards
-- [ ] Fix waybar privacy module OR cava
-- [ ] Fix waybar date module
-- [ ] Fix waybar temperature wrong
-- [ ] Change waybar weather logo (maybe switch to script 2)
+- [ ] Fix waybar privacy module issue with cava
 - [ ] Switch updater module to this:
     -- https://github.com/coffebar/waybar-module-pacman-updates
 
