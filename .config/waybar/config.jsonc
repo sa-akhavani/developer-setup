@@ -2,7 +2,7 @@
   "include": [
     "~/.config/waybar/modules/modules.jsonc",
     "~/.config/waybar/modules/cava.jsonc",
-    "~/.config/waybar/modules/privacy.jsonc",
+    // "~/.config/waybar/modules/privacy.jsonc",
     "~/.config/waybar/modules/bluetooth.jsonc",
     "~/.config/waybar/modules/clock.jsonc",
     "~/.config/waybar/modules/battery.jsonc",
@@ -50,7 +50,7 @@
     "custom/updater",
     "cava",
   ],
-  "modules-center": ["hyprland/window", "privacy"],
+  "modules-center": ["hyprland/window"],
   "modules-right": [
     "mpris",
     "wireplumber",
