@@ -1,0 +1,34 @@
+{
+  "custom/menu": {
+    "format": "󰣇",
+    "on-click": "fuzzel --config=$HOME/.config/fuzzel/fuzzel.ini",
+    "tooltip": false,
+    // "on-click": "$HOME/.config/waybar/scripts/menu",
+  },
+
+  "custom/power": {
+    "format": "󰐥",
+    "on-click": "wlogout --protocol layer-shell",
+    "tooltip": false,
+    // "on-click": "$HOME/.config/hypr/scripts/wlogout",
+  },
+
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10,
+  },
+
+  "custom/color-picker": {
+    "format": "󰌁",
+    "on-click": "hyprpicker -a",
+    "tooltip": false,
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " ",
+    },
+  },
+}

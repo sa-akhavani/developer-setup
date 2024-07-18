@@ -1,0 +1,12 @@
+{
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "En",
+    "format-fa": "Fa",
+    // "keyboard-name": "at-translated-set-2-keyboard",
+    "keyboard-name": "cooler-master-technology-inc.-masterkeys-s",
+    // Hyprland language switch wayland
+    // "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+    "on-click": "hyprctl switchxkblayout cooler-master-technology-inc.-masterkeys-s ext",
+  },
+}
