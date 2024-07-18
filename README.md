@@ -146,6 +146,18 @@ its number as the value of the source
 - https://github.com/karlstav/cava/issues/422#issuecomment-994270910
 - You can check and monitor it using coppwr OR helvum
 
+### Wrong temperature in waybar
+- https://askubuntu.com/a/854029/1011286
+- https://github.com/Alexays/Wayklbar/issues/2929#issuecomment-2031721187
+
+```bash
+cat /sys/class/thermal/thermal_zone*/temp
+# To see what zones the temperatures are referring to use:
+paste <(cat /sys/class/thermal/thermal_zone*/type) <(cat /sys/class/thermal/thermal_zone*/temp) | column -s $'\t' -t | sed 's/\(.\)..$/.\1°C/'
+INT3400 Thermal  20.0°C
+
+```
+
 ### NVM in fish
 Setting up nvm in fish is a pain. These are some resources that help.
 - https://github.com/jorgebucaran/nvm.fish

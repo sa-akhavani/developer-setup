@@ -1,25 +1,22 @@
 {
   "battery": {
     "interval": 60,
-    "align": 0,
-    "rotate": 0,
-    //"bat": "BAT1",
-    //"adapter": "ACAD",
     "full-at": 100,
-    // "design-capacity": false,
     "states": {
       "good": 95,
       "warning": 30,
       "critical": 15,
     },
-    "format": "{icon} {capacity}%",
+    "format": "{icon}  {capacity}%",
+    "format-full": "{icon}  Full",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
-    "format-full": "{icon} Full",
     //"format-good": "",
     "format-alt": "{icon} {time}",
     "format-icons": ["", "", "", "", ""],
     "format-time": "{H}h {M}min",
-    // "tooltip": true,
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["", "", "", "", ""],
   },
 }

@@ -42,7 +42,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 
 ####
-# Audio - Pipewire + Wireplumber + Coppwr + EasyEffects + Pulsemixer
+# Audio - Pipewire + Wireplumber + Coppwr + EasyEffects + Pulsemixer + Playerctl
 # Pulsemixer is meant for pulseaudio but works well with pipewire too!
 # https://github.com/mikeroyal/PipeWire-Guide
 # https://gitlab.freedesktop.org/rncbc/qpwgraph
@@ -53,6 +53,7 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 ####
 sudo pacman -S pipewire wireplumber
 sudo pacman -S coppwr easyeffects pulsemixer
+sudo pacman -S playerctl
 
 
 ####
@@ -66,9 +67,9 @@ sudo pacman -S xkeyboard-config
 
 
 ####
-# Terminal - Kitty
+# Terminal - Kitty + Tmux
 ####
-sudo pacman -S kitty
+sudo pacman -S kitty tmux
 
 
 ####
@@ -78,12 +79,6 @@ sudo pacman -S fish
 chsh -s /usr/bin/fish # change default shell
 # Prompt Theme Engine
 sudo pacman -S starship
-
-
-####
-# TMUX
-####
-sudo pacman -S tmux
 
 
 ####
@@ -101,7 +96,7 @@ sudo pacman -S ly
 
 
 ####
-# Bluetooth (bluez + blueman (gui))
+# Bluetooth - bluez + blueman (gui)
 # https://wiki.archlinux.org/title/Bluetooth
 # Check with "rfkill" command that nothing is blocked
 ####
@@ -169,7 +164,7 @@ sudo pacman -S grim slurp swappy
 yay -S wlogout
 
 ####
-# Lock Screen
+# Lock Screen - hyprlock  (or swaylock)
 ####
 sudo pacman -S hyprlock
 
@@ -200,9 +195,20 @@ sudo pacman -S polkit-kde-agent
 
 ####
 # Waybar Setup
+# Don't install it using aur or pacman
+# it doesn't have support for cava module
+# sudo pacman -S waybar
 ####
 sudo usermod -aG input $USER # Waybar module for keyboard status needs this
-# sudo pacman -S waybar
+yay -S libcava #libcava is needed for waybar
+git clone https://aur.archlinux.org/waybar-git.git
+cd waybar-git
+# vim PKGBUILD
+# change Dcava=diabled -> Dcava=enabled
+# add Dmpd=enabled
+# makepkg
+# Then install it using:
+# pacman -U <output_package_name>
 
 
 ####
@@ -251,7 +257,6 @@ yay -S ianny-git
 ####
 sudo pacman -S cmatrix
 yay -S pipes.sh
-yay -S libcava #libcava is needed for waybar
 # yay -S cava
 
 ####
@@ -265,7 +270,9 @@ yay -S spotify   # Official Client
 # yay -S spotify-launcher
 pacman -S ncspot # Command Line Unofficial Client
 
-
 # Telegram Messanger
 yay -S telegram-desktop
+
+# Teams and Slack
+yay -S slack-desktop teams
 
