@@ -1,18 +1,16 @@
 [main]
-; font=Gabarito
-font=FiraCode Nerd Font SemiBold:size=10
-; dpi-aware=no
+font=FiraCode Nerd Font:weight=SemiBold:size=10
 fields=name,generic,comment,categories,filename,keywords
-terminal=foot -e
+terminal=kitty 
 prompt="  " 
 layer=overlay
 icon-theme=Papirus
 icons-enabled=yes
 show-actions=yes
-anchor=top
+anchor=center
 
 lines=10
-width=30
+width=40
 horizontal-pad=20
 vertical-pad=20
 inner-pad=5
@@ -25,13 +23,9 @@ image-size-ratio=0.2
 layer = top
 exit-on-keyboard-focus-loss = yes
 
-
 [border]
-radius=10
+radius=5
 width=1
-
-; [dmenu]
-; exit-immediately-if-empty=yes
 
 [colors]
 background=1a1b26ff
@@ -42,11 +36,3 @@ border=7aa2f7ff
 match=9ece6aff
 selection-match=9ece6aff
 
-; [colors]
-; background=1D1011ff
-; text=F7DCDEff
-; selection=574144ff
-; selection-text=DEBFC2ff
-; border=574144dd
-; match=FFB2BCff
-; selection-match=FFB2BCff

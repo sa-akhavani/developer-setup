@@ -12,8 +12,8 @@ on-touch=dismiss
 # on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 # STYLE OPTIONS
-# font=FiraCode Nerd Font 10
-font=vazirmatn 10
+font=FiraCode Nerd Font, vazirmatn 11
+# font=vazirmatn 10
 width=350
 height=100
 margin=10
@@ -35,26 +35,46 @@ max-visible=5
 layer=overlay
 anchor=top-right
 
-background-color=#1e1e2e
-text-color=#d9e0ee
-border-color=#313244
-progress-color=over #89b4fa
-
 [urgency=low]
-border-color=#313244
-default-timeout=2000
+background-color=#282828bf
+progress-color=source #458588bf
+text-color=#ebdbb2
+default-timeout=30000
 
 [urgency=normal]
-border-color=#313244
-default-timeout=5000
+background-color=#fbf1c7bf
+progress-color=source #83a598bf
+text-color=#3c3836
+default-timeout=300000
 
-[urgency=high]
-border-color=#f38ba8
-text-color=#f38ba8
+[urgency=critical]
+background-color=#fb4934bf
+progress-color=source #cc241dbf
+text-color=#ebdbb2
 default-timeout=0
 
-[category=mpd]
-border-color=#f9e2af
-default-timeout=2000
-group-by=category
 
+
+# background-color=#1e1e2e
+# text-color=#d9e0ee
+# border-color=#313244
+# progress-color=over #89b4fa
+#
+# [urgency=low]
+# border-color=#313244
+# default-timeout=2000
+#
+# [urgency=normal]
+# border-color=#313244
+# default-timeout=5000
+#
+# [urgency=high]
+# border-color=#f38ba8
+# text-color=#f38ba8
+# default-timeout=0
+#
+# [category=mpd]
+# border-color=#f9e2af
+# default-timeout=2000
+# group-by=category
+#
