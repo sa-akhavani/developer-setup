@@ -93,8 +93,9 @@ sudo pacman -S neovim
 
 
 ####
-# Install Display Manager (SDDM)
+# Display Manager - Ly /SDDM
 ####
+sudo pacman -S ly
 # yay -S sddm
 # sudo systemctl enable sddm
 
@@ -201,7 +202,7 @@ sudo pacman -S polkit-kde-agent
 # Waybar Setup
 ####
 sudo usermod -aG input $USER # Waybar module for keyboard status needs this
-sudo pacman -S waybar
+# sudo pacman -S waybar
 
 
 ####
@@ -250,8 +251,8 @@ yay -S ianny-git
 ####
 sudo pacman -S cmatrix
 yay -S pipes.sh
-# yay -S libcava #libcava is needed for waybar
-yay -S cava
+yay -S libcava #libcava is needed for waybar
+# yay -S cava
 
 ####
 # Applications

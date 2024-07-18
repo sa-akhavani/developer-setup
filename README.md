@@ -106,8 +106,14 @@ So I chose `Ly` as my display manager, keeping everything minimal.
 ## Misc
 
 ### Cava in Waybar
-If cava isn't working -> try installing waybar-cava from AUR.
-Also before that, you need to fully remove libcava and cava from your system.
+- waybar-git package in AUR has set cava to be disabled.
+So you either have to clone the AUR git repo and build it using mkpkg OR
+clone the github repo and build it using that.
+https://github.com/Alexays/Waybar/issues/2781#issuecomment-1873613007
+
+- Don't forget to regularly check for updates!
+
+- Also before that, you MIGHT need to fully remove / or install libcava and cava from your system.
 
 ```bash
 yay -R cava libcava
@@ -116,8 +122,29 @@ sudo rm -rfv /usr/lib64/libcava.so
 sudo rm -rfv /usr/lib/pkgconfig/cava.pc
 sudo rm -rfv /usr/lib64/pkgconfig/cava.pc
 sudo rm -rfv /usr/include/cava
-yay -S waybar-cava
+yay -S libcava
+cd /tmp
+git clone https://aur.archlinux.org/waybar-git.git
+cd waybar-git
+vim PKGBUILD
+# change Dcava=diabled -> Dcava=enabled
+# add Dmpd=enabled
+makepkg
+# Then install it using:
+pacman -U <output_package_name>
 ```
+
+### Cava using microphone
+
+- Make sure to set method to pipewire. fot method DO NOT use alsa
+- For the source, it will automatically try to get it from the output
+- If not, use `wpctl status`, then under Audio, Sinks, Pick the number that
+represents the speaker.
+Or use `pactl list sources` and in the output, find the speaker and use
+its number as the value of the source
+- https://github.com/karlstav/cava?tab=readme-ov-file#pipewire
+- https://github.com/karlstav/cava/issues/422#issuecomment-994270910
+- You can check and monitor it using coppwr OR helvum
 
 ### NVM in fish
 Setting up nvm in fish is a pain. These are some resources that help.
