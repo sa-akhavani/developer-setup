@@ -1,6 +1,6 @@
 {
   "network": {
-    "interval": 10,
+    "interval": 30,
     // "interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
     "format-wifi": "   {essid}",
     "format-ethernet": " {ipaddr}/{cidr}",

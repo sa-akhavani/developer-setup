@@ -16,6 +16,7 @@
       },
       {
         "type": "audio-in",
+        "exclude": ["cava"],
         "tooltip": true,
         "tooltip-icon-size": 24,
       },

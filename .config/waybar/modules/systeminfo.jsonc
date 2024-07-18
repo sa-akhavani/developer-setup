@@ -1,10 +1,10 @@
 {
   "cpu": {
-    "interval": 10,
+    "interval": 20,
     "format": "  {usage}%",
   },
   "memory": {
-    "interval": 10,
+    "interval": 20,
     "format": "  {percentage}%",
     "tooltip-format": "  {used:0.1f}G/{total:0.1f}G",
   },
@@ -14,14 +14,12 @@
     "unit": "GB",
   },
   "temperature": {
-    "interval": 10,
+    "interval": 20,
     // might need to change this to another zone
     // https://askubuntu.com/a/628124/1011286
-
     "thermal-zone": 2, 
     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     "format": "{temperatureC}°C ",
-    // "unit": "metric",
   },
 }
