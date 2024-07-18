@@ -5,11 +5,11 @@ location2="Tehran"
 error="Service Unavailable"
 
 get_weather() {
-    curl -s "https://wttr.in/$1?format=1"
+    curl -s "https://wttr.in/$1?m&format=1"
 }
 
 get_tooltip() {
-    curl -s "https://wttr.in/$1?format=%C+%c+%t+%f+%w+%m+%h"
+    curl -s "https://wttr.in/$1?m&format=%C+%c+%t+%f+%w+%m+%h"
 }
 
 format_tooltip() {

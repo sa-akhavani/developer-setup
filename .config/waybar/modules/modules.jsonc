@@ -4,26 +4,26 @@
     "align": 0,
     "rotate": 0,
     //"device": "amdgpu_bl0",
-    "format": "{icon} {percent}%",
-    "format-icons": [" 󰃞 ", " 󰃟 ", " 󰃝 ", " 󰃠 "],
+    "format": "{icon}{percent}%",
+    "format-icons": ["󰃞 ", "󰃟 ", "󰃝 ", "󰃠 "],
     // Commands to execute on events
-    "on-click": "",
-    "on-click-middle": "",
-    "on-click-right": "",
-    "on-update": "",
+    // "on-click": "",
+    // "on-click-middle": "",
+    // "on-click-right": "",
+    // "on-update": "",
     "on-scroll-up": "brightnessctl set 10%-",
     "on-scroll-down": "brightnessctl set 10%+",
     "smooth-scrolling-threshold": 1,
   },
 
   "battery": {
-    "interval": 60,
+    "interval": 30,
     "align": 0,
     "rotate": 0,
     //"bat": "BAT1",
     //"adapter": "ACAD",
     "full-at": 100,
-    "design-capacity": false,
+    // "design-capacity": false,
     "states": {
       "good": 95,
       "warning": 30,
@@ -37,7 +37,7 @@
     "format-alt": "{icon} {time}",
     "format-icons": ["", "", "", "", ""],
     "format-time": "{H}h {M}min",
-    "tooltip": true,
+    // "tooltip": true,
   },
 
   "clock": {
@@ -47,6 +47,17 @@
     "timezone": "America/New_York",
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     "format": " {:%H:%M}",
+    "format-alt": " {:%a %b %d, %G}",
+    //     "format-alt": "{:%m-%d-%Y}",
+  },
+
+  "custom/clock": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "timezone": "America/New_York",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    // "format": " {:%H:%M}",
     "format-alt": " {:%a %b %d, %G}",
     //     "format-alt": "{:%m-%d-%Y}",
   },
@@ -132,7 +143,7 @@
   "network": {
     "interval": 10,
     // "interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
-    "format-wifi": " {essid}",
+    "format-wifi": "  {essid}",
     "format-ethernet": " {ipaddr}/{cidr}",
     "format-linked": " {ifname} (No IP)",
     "format-disconnected": "睊 Disconnected",
@@ -147,18 +158,17 @@
     "format-alt-click": "click-right",
     "interval": 1800,
     "return-type": "json",
-    // "exec": "~/.config/waybar/scripts/weather.sh",
-    "exec": "~/.config/waybar/scripts/weather-2.sh",
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    // "exec": "~/.config/waybar/scripts/weather-2.sh",
     "exec-if": "ping wttr.in -c1",
   },
 
   "custom/updater": {
     // "format": "  {} ",
-    "format": " {} ",
+    "format": " {}",
     "exec": "checkupdates | wc -l",
     "exec-if": "[[ $(checkupdates | wc -l) ]]",
-    "interval": 60,
-    "on-click": "kitty -e yay -Syu && notify-send 'The system has been updated' ",
+    "interval": 300,
   },
 
   "pulseaudio": {
@@ -191,7 +201,7 @@
   },
 
   "custom/color-picker": {
-    "format": " 󰌁 ",
+    "format": "󰌁",
     "on-click": "hyprpicker -a",
   },
 
@@ -222,10 +232,13 @@
     "format": "{}",
     "format-en": "En",
     "format-fa": "Fa",
-    "keyboard-name": "at-translated-set-2-keyboard",
+    // "keyboard-name": "at-translated-set-2-keyboard",
+    "keyboard-name": "cooler-master-technology-inc.-masterkeys-s",
     // Hyprland language switch wayland
-    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+    // "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next",
+    "on-click": "hyprctl switchxkblayout cooler-master-technology-inc.-masterkeys-s ext",
   },
+
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -233,27 +246,68 @@
       "deactivated": " ",
     },
   },
+  "temperature": {
+    // "interval": 60,
+    "format": "{temperatureC}°C ",
+    "unit": "metric",
+  },
+
   "cava": {
-   "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+    // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
     "framerate": 30,
     "autosens": 1,
-    "sensitivity": 100,
+    // "sensitivity": 20,
     "bars": 14,
-    "lower_cutoff_freq": 50,
-    "higher_cutoff_freq": 10000,
-    "method": "pulse",
+    // "lower_cutoff_freq": 50,
+    // "higher_cutoff_freq": 10000,
+    // "method": "pulse",
     "source": "auto",
-    "stereo": true,
-    "reverse": false,
+    // "stereo": true,
+    // "reverse": false,
     "bar_delimiter": 0,
-    "monstercat": false,
-    "waves": false,
-    "noise_reduction": 0.77,
-    "input_delay": 2,
+    // "monstercat": false,
+    // "waves": false,
+    // "noise_reduction": 0.77,
+    // "input_delay": 2,
     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    "actions": {
-      "on-click-right": "mode",
+    // "actions": {
+    //   "on-click-right": "mode",
+    // },
+  },
+  "bluetooth": {
+    // "controller": "bluez", // specify the alias of the controller if there are more than 1 on the system
+    "format": " {status}",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": " {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  },
+
+  "mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "interval": 10,
+    "consume-icons": {
+      "on": " ", // Icon shows only when "consume" is on
     },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ", // Icon grayed out when "random" is off
+      "on": " ",
+    },
+    "repeat-icons": {
+      "on": " ",
+    },
+    "single-icons": {
+      "on": "1 ",
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": "",
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)",
   },
 
   // "hyprland/workspaces": {

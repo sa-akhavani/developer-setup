@@ -32,7 +32,7 @@ sudo pacman -S network-manager-applet
 ####
 sudo pacman -S git base-devel
 sudo pacman -S cmake make gcc
-sudo pacman -S fzf lsd
+sudo pacman -S fzf lsd pacman-contrib
 
 
 ####

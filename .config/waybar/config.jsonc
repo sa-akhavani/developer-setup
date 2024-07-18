@@ -1,52 +1,58 @@
 // Waybar config file
 {
-    "include": "~/.config/waybar/modules.jsonc",
-    "name": "main-bar", 
-    "id": "main-bar",
-    "layer": "top",
-    "mode": "dock",
-    "exclusive": true, 	
-    "passthrough": false, 
-    "position": "top", // (top|bottom|left|right)
-    // "output": "DP-2", 	
-    "height": 36, // "" for auto height
-    "width": "",
-    "spacing": 6, 		
-    "margin": 0, 		
-    "margin-top": 0, 	
-    "margin-bottom": 0, 
-    "margin-left": 0, 	
-    "margin-right": 0, 	
-    "fixed-center": true, 
-    "ipc": true, 		
- 
-    // "modules-left": ["custom/menu", "wlr/workspaces", "cpu", "memory", "disk", "custom/updater"],
-    "modules-left": ["custom/menu", "hyprland/workspaces", "cpu", "memory", "disk", "temperature"],
-    "modules-center": ["hyprland/window", "tray", "mpd"],
-    "modules-right": ["custom/color-picker", "custom/weather", "network", "battery", "clock", "custom/power"],
+  "include": "~/.config/waybar/modules/modules.jsonc",
+  // "include": "~/.config/waybar/modules/*.jsonc",
+  "name": "main-bar",
+  "id": "main-bar",
+  "layer": "top",
+  "mode": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "position": "top", // (top|bottom|left|right)
+  // "output": "DP-2",
+  "height": 30, // "" for auto height
+  "width": "",
+  "spacing": 4,
+  "margin": 0,
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "fixed-center": true,
+  "ipc": true,
+
+  // "modules-left": ["custom/updater"],
+  // If cava isn't working -> try installing waybar-cava from AUR.
+  // Also before that, you need to fully remove libcava and cava from your system.
+
+  "modules-left": [
+    "custom/menu",
+    "hyprland/workspaces",
+    "cpu",
+    "memory",
+    "disk",
+    "temperature",
+    "custom/updater",
+    "mpd",
+    "cava",
+  ],
+  // "modules-center": ["hyprland/window", "tray", "privacy"],
+  "modules-center": ["hyprland/window", "tray"],
+  "modules-right": [
+    "custom/color-picker",
+    "custom/weather",
+    "bluetooth",
+    "network",
+    "battery",
+    "backlight",
+    "idle_inhibitor",
+    "keyboard-state",
+    "hyprland/language",
+    "clock", // this is for date. Find a better solution later
+    "clock",
+    "custom/power",
+  ],
 }
 
-// {
-//   // Choose the order of the modules
-//   "modules-center": [
-//     "hyprland/window",
-//   ],
-//
-//   "modules-right": [
-//     "custom/color-picker",
-//     "keyboard-state",
-//     "idle_inhibitor",
-//     "hyperland/language",
-//     // "pulseaudio",
-//     "backlight",
-//     "battery",
-//     "clock",
-//     // "keyboard-state",
-//     "tray",
-//   ],
-//
-//   // "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
-//   // "modules-right": ["battery", "battery#bat2", "clock", "tray"],
-//
-// }
-// }
+// "pulseaudio",
+// "custom/media"

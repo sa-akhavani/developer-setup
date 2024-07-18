@@ -88,8 +88,40 @@ So I chose `Ly` as my display manager, keeping everything minimal.
 - I spent a lot of time coming up with something that is not bloated but a ton of features and am very proud of this config.
 
 
+## WIP
+
+#### Waybar
+- [ ] Fix waybar keyboard layout change in multiple keyboards
+- [ ] Fix waybar privacy module OR cava
+- [ ] Fix waybar date module
+- [ ] Fix waybar temperature wrong
+- [ ] Change waybar weather logo (maybe switch to script 2)
+- [ ] Switch updater module to this:
+    -- https://github.com/coffebar/waybar-module-pacman-updates
+
+#### Fonts
+- [ ] Fix browser font
+- [ ] Figure out how mono fonts issues are solved and which font to use
+
 ## Misc
 
+### Cava in Waybar
+If cava isn't working -> try installing waybar-cava from AUR.
+Also before that, you need to fully remove libcava and cava from your system.
+
+```bash
+yay -R cava libcava
+sudo rm -rfv /usr/lib/libcava.so
+sudo rm -rfv /usr/lib64/libcava.so
+sudo rm -rfv /usr/lib/pkgconfig/cava.pc
+sudo rm -rfv /usr/lib64/pkgconfig/cava.pc
+sudo rm -rfv /usr/include/cava
+yay -S waybar-cava
+```
+
+### NVM in fish
+Setting up nvm in fish is a pain. These are some resources that help.
+- https://github.com/jorgebucaran/nvm.fish
 
 ### Neovim and Tmux
 I should read this: https://www.bugsnag.com/blog/tmux-and-vim/
