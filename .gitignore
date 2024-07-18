@@ -12,10 +12,12 @@ xfce4
 RaySession
 .config/spotify
 .config/ncspot
-Thunar
+.config/Thunar
 .config/btop/btop.log
 .config/easyeffects
 .config/Slack
 .config/Microsoft
 .config/autostart
 .config/teams
+.config/mimeapps.list
+
