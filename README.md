@@ -36,8 +36,8 @@ To replicate my setup:
 
 ```bash
 git clone https://github.com/sa-akhavani/dotfiles.git && cd dotfiles
-chmod +x ./arch.sh
-./arch.sh
+chmod +x ./install.sh
+./install.sh
 cp -r ./.config/* ~/.config/
 cp -r ./etc/* /etc/
 ```
