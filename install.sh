@@ -164,9 +164,9 @@ sudo pacman -S grim slurp swappy
 yay -S wlogout
 
 ####
-# Lock Screen - hyprlock  (or swaylock)
+# Lock Screen and Idle Daemon - hyprlock + hypridle (or swaylock)
 ####
-sudo pacman -S hyprlock
+sudo pacman -S hyprlock hypridle
 
 
 ####
