@@ -13,12 +13,9 @@ end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    neofetch
+    fastfetch -c ~/.config/fastfetch/config.jsonc
 end
 
 # Install Starship
 starship init fish | source
-if test -f ~/.cache/ags/user/generated/terminal/sequences.txt
-    cat ~/.cache/ags/user/generated/terminal/sequences.txt
-end
 

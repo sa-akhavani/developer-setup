@@ -12,3 +12,6 @@ xfce4
 RaySession
 .config/spotify
 .config/ncspot
+Thunar
+.config/btop/btop.log
+.config/easyeffects
