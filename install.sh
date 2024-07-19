@@ -73,12 +73,10 @@ sudo pacman -S kitty tmux
 
 
 ####
-# Shell - Fish + Starship
+# Shell and Prompt Theme Engine - Fish + Starship
 ####
-sudo pacman -S fish
+sudo pacman -S fish starship
 chsh -s /usr/bin/fish # change default shell
-# Prompt Theme Engine
-sudo pacman -S starship
 
 
 ####
@@ -246,6 +244,7 @@ yay -S vazir-code-fonts
 ####
 yay -S papirus-icon-theme-git
 
+
 ####
 # Break Reminder
 ####
@@ -258,6 +257,7 @@ yay -S ianny-git
 sudo pacman -S cmatrix
 yay -S pipes.sh
 # yay -S cava
+#
 
 ####
 # Applications
@@ -271,8 +271,11 @@ yay -S spotify   # Official Client
 pacman -S ncspot # Command Line Unofficial Client
 
 # Telegram Messanger
-yay -S telegram-desktop
+yay -S telegram-desktop discord
 
 # Teams and Slack
 yay -S slack-desktop teams
 
+# Media Players
+yay -S vlc jellyfin-media-player 
+# yay -S mpv
