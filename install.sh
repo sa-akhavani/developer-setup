@@ -1,27 +1,4 @@
 ####
-# Setting up wifi during installation:
-# https://wiki.archlinux.org/title/Iwd
-##
-# Using iwd
-# change /etc/iwd/main.conf
-# iwctl
-# device list
-# station <station_name> scan
-# station <station_name> get-networks
-# if you want to connect to a 8021x security network do the next 3 steps.
-# if not, jump to last line
-# exit iwctl
-# add ssid setting in /var/lib/iwd/<SSID.security>
-# iconv -t utf16le | openssl md4 -provider legacy # hash your password
-# iwctl
-# station <station_name> connect <ssid>
-#
-##
-## connect to internet after install using nmcli:
-# nmcli --ask device wifi connect <ssid>
-####
-
-####
 # Network Manager
 ###
 sudo pacman -S network-manager-applet

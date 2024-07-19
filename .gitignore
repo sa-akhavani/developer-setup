@@ -20,4 +20,6 @@ RaySession
 .config/autostart
 .config/teams
 .config/mimeapps.list
+.config/discord
+.config/GIMP
 

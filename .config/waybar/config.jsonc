@@ -19,6 +19,7 @@
     "~/.config/waybar/modules/custom-updater.jsonc",
   ],
 
+  "output": ["DP-1", "eDP-1"],
   "name": "main-bar",
   "id": "main-bar",
   "layer": "top",
@@ -26,7 +27,6 @@
   "exclusive": true,
   "passthrough": false,
   "position": "top", // (top|bottom|left|right)
-  "output": "DP-1",
   // "height": 30, // "" for auto height
   "height": 24,
   "width": "",

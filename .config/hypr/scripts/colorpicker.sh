@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-## Simple Script To Pick Color Quickly.
+# Simple Script To Pick Color Quickly.
+# Using only grim and slurp
 
 color=$(grim -g "`slurp -b 1B1F2800 -p`" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n1 | cut -d' ' -f4)
 image=/tmp/${color}.png

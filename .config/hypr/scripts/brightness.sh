@@ -31,17 +31,17 @@ get_icon() {
 
 # Notify
 notify_user() {
-	notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$icon" "Brightness : $(get_backlight)"
+	notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -t 1000 -i "$icon" "Brightness : $(get_backlight)"
 }
 
 # Increase brightness
 inc_backlight() {
-	brightnessctl set 10%+ && get_icon && notify_user
+	brightnessctl set 5%+ && get_icon && notify_user
 }
 
 # Decrease brightness
 dec_backlight() {
-	brightnessctl set 10%- && get_icon && notify_user
+	brightnessctl set 5%- && get_icon && notify_user
 }
 
 # Execute accordingly
