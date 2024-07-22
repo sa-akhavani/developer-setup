@@ -168,6 +168,7 @@ sudo pacman -S keychain
 # Remaining Must Haves
 ####
 sudo pacman -S qt5-wayland qt6-wayland
+sudo pacman -S nwg-look qt5ct qt6ct
 sudo pacman -S polkit-kde-agent
 # autostart it by adding this to hyprland config: exec-once=/usr/lib/polkit-kde-authentication-agent-1
 
