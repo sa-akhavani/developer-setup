@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 hyprlock
+
 # Background Image
 # IMAGE="$HOME/Pictures/Wallpaper/lockscreen.png"
 #

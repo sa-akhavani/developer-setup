@@ -1,17 +1,28 @@
+@define-color foreground #eff0f1;
+@define-color foreground-inactive #7f8c8d;
+@define-color background #232629;
+@define-color background-alt #31363b;
+
 * {
-  font-family: "FircaCode Nerd Font", "Noto Sans", "Vazir Code", sans-serif;
-  font-size: 14px;
+  font-family: "NotoSans", OpenSans, Symbols Nerd Font Mono, FreeMono;
+  font-weight: normal;
+  font-size: 11px;
   border-radius: 5px;
+}
+
+#waybar {
 }
 
 window#waybar {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: FontAwesome, monospace;
-  background-color: transparent;
+  /* font-family: FontAwesome, monospace; */
+  /* background-color: transparent; */
   border-bottom: 0px;
-  color: #ebdbb2;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+  /* color: #ebdbb2; */
+  color: @foreground;
+  background-color: @background;
+  /* transition-property: background-color; */
+  /* transition-duration: 0.5s; */
 }
 
 window#waybar.hidden {
@@ -21,15 +32,6 @@ window#waybar.hidden {
 window#waybar.empty #window {
   background-color: transparent;
 }
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
 
 .modules-right {
   margin: 2px 10px 0 0;
@@ -92,7 +94,6 @@ button {
 }
 
 #idle_inhibitor,
-#cava,
 #mode,
 #window,
 #clock,
@@ -103,10 +104,11 @@ button {
 #language,
 #network,
 #bluetooth,
-#cpu,
-#temperature,
-#memory,
-#disk,
+#usage,
+/* #cpu, */
+/* #temperature, */
+/* #memory, */
+/* #disk, */
 #custom-weather,
 #custom-menu,
 #custom-power,
@@ -115,7 +117,21 @@ button {
 /* #load, */
 #privacy,
 #mpris {
-  padding: 0 10px;
+  padding: 0 7px;
+  /* background-color: #282828; */
+  color: #ebdbb2;
+}
+
+#mpris {
+  padding: 0 2px;
+  /* font-family: "Liberation"; */
+  /* font-size: 9px; */
+}
+#cava {
+  /* padding: 0 5px; */
+  /* background-color: @background-color */
+  /* background-color: @background-alt; */
+  /* padding: 0 10px; */
   background-color: #282828;
   color: #ebdbb2;
 }
@@ -134,7 +150,6 @@ button {
   background-color: #673d6a;
 }
 
-
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
   margin-left: 0;
@@ -143,11 +158,6 @@ button {
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
   margin-right: 0;
-}
-
-#cava {
-  font-family: FiraCode Nerd Font;
-  padding: 0 5px;
 }
 
 #battery.charging,
@@ -183,23 +193,40 @@ label:focus {
   background-color: #458588;
 }
 
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-}
+/* #tray > .passive { */
+/*   -gtk-icon-effect: dim; */
+/* } */
+/**/
+/* #tray > .needs-attention { */
+/*   -gtk-icon-effect: highlight; */
+/* } */
 
 #mpris.playing {
   background-color: #d79921;
   color: #282828;
 }
 
-#tray menu {
-  font-family: sans-serif;
-}
+/* #tray menu { */
+  /* font-family: sans-serif; */
+/* } */
 
 #scratchpad.empty {
   background: transparent;
+}
+
+#usage,
+#connections {
+  /* background-color: #d79921; */
+  background-color: @background-alt;
+  border-radius: 3px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0.3em;
+}
+
+#cpu,
+#temperature,
+/* #disk,  */
+#memory {
+  margin-right: 0.8em;
 }

@@ -1,6 +1,7 @@
 {
   "custom/updater": {
-    "format": "  {}",
+    "format": "󰮯  {}",
+    // "format": "  {}",
     // "exec": "~/.config/waybar/scripts/checkupdates.sh | wc -l",
     // "exec-if": "[[ $(~/.config/waybar/scripts/checkupdates.sh | wc -l) ]]",
     "exec": "checkupdates | wc -l",

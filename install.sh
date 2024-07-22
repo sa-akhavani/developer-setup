@@ -1,7 +1,10 @@
 ####
-# Network Manager
+# Network Connection - iwd + iwgtk
+# Network Manager + network-manager-applet + nmtui are alternatives
 ###
-sudo pacman -S network-manager-applet
+yay -S iwd iwgtk
+# sudo pacman -S network-manager-applet nmtui
+# yay -S nmtui
 
 
 ####
@@ -187,6 +190,15 @@ cd waybar-git
 # pacman -U <output_package_name>
 
 
+
+
+####
+# Gestures - Fusuma + ydotool
+####
+sudo pacman -S libinput ruby ydotool
+sudo gem install fusuma --no-user-instal
+
+
 ####
 # Color picker
 ####
@@ -194,27 +206,20 @@ yay -S hyprpicker-git
 
 
 ####
-# Nerd Font + Apple Emoji
+# Fonts and Emojis
 #
 # https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
 # https://github.com/samuelngs/apple-emoji-linux/releases/latest/download/AppleColorEmoji.ttf
 # mkdir ~/.local/share/fonts/
 #
 ####
-sudo pacman -S ttf-firacode-nerd
-sudo pacman -S ttf-liberation
+sudo pacman -S ttf-fira-code ttf-nerd-fonts-symbols-mono ttf-liberation ttf-opensans
 yay -S ttf-apple-emoji
+yay -S vazirmatn-fonts
+# yay -S vazir-code-fonts
 # fc-cache -f -v # clear and regenerate font cache
 # fc-list | grep "FiraCode Nerd Font" # confirming installation
 # fc-list | grep "AppleColorEmoji" # confirming installation
-
-####
-# Persian Fonts
-####
-# sudo pacman -S bicon-git iranian-fonts
-# yay -S xkb-switch
-yay -S vazirmatn-fonts
-yay -S vazir-code-fonts
 
 
 ####
@@ -248,8 +253,9 @@ yay -S spotify   # Official Client
 # yay -S spotify-launcher
 pacman -S ncspot # Command Line Unofficial Client
 
-# Telegram Messanger
+# Messangers
 yay -S telegram-desktop discord
+sudo pacman -S signal-desktop
 
 # Teams and Slack
 yay -S slack-desktop teams

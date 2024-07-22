@@ -175,3 +175,25 @@ For more troubleshooting tips, check out these resources:
 - [Arch Linux Wiki](https://wiki.archlinux.org/title/Spotify)
 - [Alternative Spotify Launcher](https://github.com/kpcyrd/spotify-launcher)
 
+### Fonts
+I use `FiraCode` font mainly.
+Do not install patched nerdfonts. I install FiraCode alone, then install
+`Symbols Nerd Font Mono` separately from their releases.
+check: https://github.com/ryanoasis/nerd-fonts/releases
+
+```bash
+sudo pacman -S ttf-fira-code ttf-nerd-fonts-symbols-mono
+
+```
+
+### Three Finger Drag Gesture
+You need to install `ydotool` and `fusuma` and configure them.
+fusuma config is in `.config/fusuma/` folder
+Make sure NOT to give sudo permission to ydotool at all!
+
+if adding stuff to hyprland didn't work do this:
+systemctl --user enable ydotool.service
+systemctl --user start ydotool.service
+
+if this also didn't work try this:
+https://github.com/iberianpig/fusuma/issues/173

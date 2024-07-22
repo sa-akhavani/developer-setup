@@ -1,23 +1,24 @@
 {
   "cpu": {
     "interval": 20,
-    "format": "  {usage}%",
+    "format": " {usage}%",
   },
   "memory": {
     "interval": 20,
-    "format": "  {percentage}%",
-    "tooltip-format": "  {used:0.1f}G/{total:0.1f}G",
+    "format": " {percentage}%",
+    "tooltip-format": " {used:0.1f}G/{total:0.1f}G",
   },
   "disk": {
     // "format": "  {free}/{total}",
-    "format": "  {specific_free:0.1f}G",
+    "path": "/",
+    "format": " {path} {specific_free:0.1f}G",
     "unit": "GB",
   },
   "temperature": {
     "interval": 20,
     // might need to change this to another zone
     // https://askubuntu.com/a/628124/1011286
-    "thermal-zone": 2, 
+    "thermal-zone": 2,
     // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
     "critical-threshold": 80,
     "format": " {temperatureC}°C",

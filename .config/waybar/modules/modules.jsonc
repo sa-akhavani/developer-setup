@@ -1,4 +1,19 @@
 {
+  "group/usage": {
+    "orientation": "horizontal",
+    "modules": ["temperature", "cpu", "memory", "disk"],
+  },
+
+  "group/connections": {
+    "orientation": "horizontal",
+    "modules": ["network", "bluetooth"],
+  },
+
+  "group/brightness": {
+    "orientation": "horizontal",
+    "modules": ["backlight", "battery"],
+  },
+
   "custom/menu": {
     "format": "󰣇",
     "on-click": "fuzzel --config=$HOME/.config/fuzzel/fuzzel.ini",
