@@ -246,6 +246,9 @@ yay -S pipes.sh
 ####
 # Applications
 ####
+# Notes
+yay -S obsidian
+
 # Browser
 sudo pacman -S firefox
 
