@@ -12,13 +12,12 @@ on-touch=dismiss
 # on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
 
 # STYLE OPTIONS
-font=FiraCode Nerd Font, vazirmatn 11
-# font=vazirmatn 10
+font=FiraCode, Vazirmatn 11
 width=350
 height=100
 margin=10
 padding=5
-border-size=2
+border-size=1
 border-radius=0
 
 icons=1
@@ -52,7 +51,6 @@ background-color=#fb4934bf
 progress-color=source #cc241dbf
 text-color=#ebdbb2
 default-timeout=0
-
 
 
 # background-color=#1e1e2e
