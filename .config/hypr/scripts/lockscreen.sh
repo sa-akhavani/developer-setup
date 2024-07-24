@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# copy a random image from the directory to the /tmp directory
+cp ~/Pictures/Lockscreen/$(ls ~/Pictures/Lockscreen | shuf -n 1) ~/.cache/wallpapers/lock.png
 hyprlock
 
 # Background Image
