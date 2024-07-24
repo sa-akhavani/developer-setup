@@ -4,7 +4,11 @@
 @define-color background-alt #31363b;
 
 * {
-  font-family: "NotoSans", OpenSans, Symbols Nerd Font Mono, FreeMono;
+  font-family:
+    "NotoSans",
+    OpenSans,
+    Symbols Nerd Font Mono,
+    FreeMono;
   font-weight: normal;
   font-size: 11px;
   border-radius: 5px;
@@ -14,10 +18,8 @@
 }
 
 window#waybar {
-  /* `otf-font-awesome` is required to be installed for icons */
-  /* font-family: FontAwesome, monospace; */
   /* background-color: transparent; */
-  border-bottom: 0px;
+  border-bottom: 0;
   /* color: #ebdbb2; */
   color: @foreground;
   background-color: @background;
@@ -34,13 +36,15 @@ window#waybar.empty #window {
 }
 
 .modules-right {
-  margin: 2px 10px 0 0;
+  /* margin: 2px 10px 0 0; */
+  margin: 0 0 0 0;
 }
 .modules-center {
   margin: 1px 0 0 0;
 }
 .modules-left {
-  margin: 1px 0 0 10px;
+  /* margin: 1px 0 0 10px; */
+  margin: 0 0 0 0;
 }
 
 button {
@@ -61,7 +65,7 @@ button {
 }
 
 #workspaces button {
-  padding: 0 5px;
+  padding: 0 2px;
   background-color: transparent;
   color: #ebdbb2;
   /* border-radius: 0; */
@@ -93,30 +97,30 @@ button {
   border-radius: 0 5px 5px 0;
 }
 
-#idle_inhibitor,
+/* #idle_inhibitor, */
 #mode,
 #window,
 #clock,
-#battery,
-#backlight,
-#wireplumber,
+/* #battery, */
+/* #backlight, */
+/* #custom-color-picker, */
+#brightness,
 #tray,
-#language,
-#network,
-#bluetooth,
+/* #network, */
+/* #bluetooth, */
+#connections,
 #usage,
 /* #cpu, */
 /* #temperature, */
 /* #memory, */
 /* #disk, */
+#language,
 #custom-weather,
 #custom-menu,
 #custom-power,
 #custom-updater,
-#custom-color-picker,
 /* #load, */
-#privacy,
-#mpris {
+#wireplumber {
   padding: 0 7px;
   /* background-color: #282828; */
   color: #ebdbb2;
@@ -124,15 +128,18 @@ button {
 
 #mpris {
   padding: 0 2px;
+  color: #ebdbb2;
   /* font-family: "Liberation"; */
   /* font-size: 9px; */
 }
 #cava {
-  /* padding: 0 5px; */
+  /* padding: 0 0 0 0; */
+  /* margin: 0 0 0 0; */
+  /* border-radius: 0px; */
   /* background-color: @background-color */
   /* background-color: @background-alt; */
   /* padding: 0 10px; */
-  background-color: #282828;
+  /* background-color: #282828; */
   color: #ebdbb2;
 }
 
@@ -144,10 +151,11 @@ button {
 
 #custom-power {
   background-color: #673d6a;
+  margin-left: 0;
 }
 
 #custom-menu {
-  background-color: #673d6a;
+  background-color: #4e392b;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -160,13 +168,6 @@ button {
   margin-right: 0;
 }
 
-#battery.charging,
-#battery.full,
-#battery.plugged {
-  background-color: #98971a;
-  color: #282828;
-}
-
 @keyframes blink {
   to {
     background-color: #282828;
@@ -174,23 +175,26 @@ button {
   }
 }
 
+/* #battery.charging, */
+/* #battery.full, */
+/* #battery.plugged { */
+/*   background-color: #98971a; */
+/*   color: #282828; */
+/* } */
+
 /* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-  background-color: #cc241d;
-  color: #ebdbb2;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
+/* #battery.critical:not(.charging) { */
+/*   background-color: #cc241d; */
+/*   color: #ebdbb2; */
+/*   animation-name: blink; */
+/*   animation-duration: 0.5s; */
+/*   animation-timing-function: steps(12); */
+/*   animation-iteration-count: infinite; */
+/*   animation-direction: alternate; */
+/* } */
 
 label:focus {
   background-color: #000000;
-}
-
-#wireplumber.muted {
-  background-color: #458588;
 }
 
 /* #tray > .passive { */
@@ -201,21 +205,25 @@ label:focus {
 /*   -gtk-icon-effect: highlight; */
 /* } */
 
-#mpris.playing {
-  background-color: #d79921;
-  color: #282828;
-}
-
 /* #tray menu { */
-  /* font-family: sans-serif; */
+/*   font-family: sans-serif; */
 /* } */
 
-#scratchpad.empty {
-  background: transparent;
-}
+/* #scratchpad.empty { */
+/*   background: transparent; */
+/* } */
 
+#custom-updater,
+#mpris,
+#wireplumber,
+#language,
+#custom-weather,
 #usage,
-#connections {
+#connections,
+#clock,
+#tray,
+/* #cava, */
+#brightness {
   /* background-color: #d79921; */
   background-color: @background-alt;
   border-radius: 3px;
@@ -224,9 +232,29 @@ label:focus {
   margin-left: 0.3em;
 }
 
+/* #disk,  */
 #cpu,
 #temperature,
-/* #disk,  */
-#memory {
-  margin-right: 0.8em;
+#memory,
+#network,
+#backlight,
+#custom-color-picker,
+#idle_inhibitor {
+  margin-right: 0.5em;
+}
+
+#wireplumber.muted {
+  background-color: #458588;
+}
+
+#mpris.playing {
+  background-color: #d79921;
+  color: #282828;
+}
+
+#cava {
+  border-radius: 0px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0.3em;
 }

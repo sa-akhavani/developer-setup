@@ -27,8 +27,13 @@ for i in {1..5}; do
 
         if [[ $? -eq 0 ]]; then
             text=$(echo "$text" | sed -E "s/\s+/ /g")
-            tooltip="$tooltip1\n$tooltip2"
-            echo "{\"text\":\"$text\", \"tooltip\":\"$tooltip\"}"
+            # In case weather website returns unknown location when it's down
+            if [[ $text == *"Unknown"* ]]; then
+              echo ""
+            else
+              tooltip="$tooltip1\n$tooltip2"
+              echo "{\"text\":\"$text\", \"tooltip\":\"$tooltip\"}"
+            fi
             exit
         fi
     fi

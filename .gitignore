@@ -24,3 +24,6 @@ RaySession
 .config/Signal
 .config/chromium
 .config/obsidian
+.config/tmux/plugins
+.config/tmux/tmux.conf
+

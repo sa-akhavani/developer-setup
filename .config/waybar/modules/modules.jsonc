@@ -11,7 +11,12 @@
 
   "group/brightness": {
     "orientation": "horizontal",
-    "modules": ["backlight", "battery"],
+    "modules": [
+      "idle_inhibitor",
+      "custom/color-picker",
+      "backlight",
+      "battery",
+    ],
   },
 
   "custom/menu": {
@@ -31,19 +36,5 @@
   "tray": {
     "icon-size": 20,
     "spacing": 10,
-  },
-
-  "custom/color-picker": {
-    "format": "󰌁",
-    "on-click": "hyprpicker -a",
-    "tooltip": false,
-  },
-
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": " ",
-      "deactivated": " ",
-    },
   },
 }
