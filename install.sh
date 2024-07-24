@@ -12,7 +12,8 @@ yay -S iwd iwgtk
 ####
 sudo pacman -S git base-devel
 sudo pacman -S cmake make gcc
-sudo pacman -S fzf lsd pacman-contrib
+sudo pacman -S fzf lsd bat
+sudo pacman -S pacman-contrib
 
 
 ####
@@ -50,6 +51,9 @@ sudo pacman -S xkeyboard-config
 # Terminal - Kitty + Tmux
 ####
 sudo pacman -S kitty tmux
+git clone https://github.com/gpakosz/.tmux.git ~/Programs/tmux
+mkdir -p ~/.config/tmux
+ln -s  ~/Programs/tmux/.tmux.conf ~/.config/tmux/tmux.conf
 
 
 ####
