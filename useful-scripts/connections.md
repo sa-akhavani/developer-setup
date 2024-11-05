@@ -9,8 +9,20 @@ Use one of them only
 
 
 ## NetworkManager
-More feature-rich than IWD I guess
+More feature-rich than IWD I guess. nmtui is a terminal gui for network manager
+```bash
 
+sudo systemctl start NetworkManager
+nmtui
+nmtui connect
+```
+
+
+
+
+
+## IWD
+basic network configurator. could NOT be used alongside networkmanager
 ```bash
 
 sudo systemctl start NetworkManager
@@ -23,8 +35,6 @@ iwctl
     station <device_name> connect <SSID>
 ```
 
-
-## IWD
 if you want to connect to a 8021x security network do the next 3 steps.
 Add ssid setting in /var/lib/iwd/<ssid.security>
 # change /etc/iwd/main.conf
