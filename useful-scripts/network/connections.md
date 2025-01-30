@@ -49,8 +49,8 @@ iwctl
 
 If you want to connect to a 8021x security network do the next 3 steps.
 Add ssid setting in /var/lib/iwd/<ssid.security>
-# change /etc/iwd/main.conf
-# iconv -t utf16le | openssl md4 -provider legacy # hash your password
+MAYBE change `/etc/iwd/main.conf`
+MAYBE `iconv -t utf16le | openssl md4 -provider legacy # hash your password`
 
 ```bash
 touch /var/lib/iwd/<ssid>.<security>
