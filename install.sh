@@ -1,10 +1,9 @@
 ####
-# Network Connection - iwd + iwgtk
 # Network Manager + network-manager-applet + nmtui are alternatives
+# Alternatives - iwd + iwgtk + impala (tui)
 ###
-yay -S iwd iwgtk
-# sudo pacman -S network-manager-applet nmtui
-# yay -S nmtui
+# sudo pacman -S iwd iwgtk impala
+sudo pacman -S networkmanager nmtui nmcli network-manager-applet
 
 
 ####
@@ -48,19 +47,19 @@ sudo pacman -S xkeyboard-config
 
 
 ####
-# Terminal - Kitty + Tmux
+# Terminal Wezterm + Tmux
 ####
-sudo pacman -S kitty tmux
+sudo pacman -S wezterm tmux
 git clone https://github.com/gpakosz/.tmux.git ~/Programs/tmux
 mkdir -p ~/.config/tmux
 ln -s  ~/Programs/tmux/.tmux.conf ~/.config/tmux/tmux.conf
 
 
 ####
-# Shell and Prompt Theme Engine - Fish + Starship
+# Default Shell and ohmyzsh
 ####
-sudo pacman -S fish starship
-chsh -s /usr/bin/fish # change default shell
+chsh -s /usr/bin/zsh # change default shell to zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" #ohmyzsh
 
 
 ####
