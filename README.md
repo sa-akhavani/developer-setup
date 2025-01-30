@@ -1,20 +1,18 @@
 # My Developr Setup Dotfiles
 
-Welcome to my GitHub repository where I share my developer setup and dotfiles.
-I've designed this environment to be fast, minimal, and feature-packed, yet aesthetically pleasing.
-I have optimized this setup for my software engineering and devops projects.
-I went through HOURS of pain to come up with this config so you don't have to!
+My development setup tools and dotfiles.
+Fast, minimal, and feature-packed, yet aesthetically pleasing environment optimized for software engineering and devops.
+I went through hours of pain to come up with this config so you don't have to!
 
 ## Overview
 
 | **Tool / Environment**         | **Description**                                                                                           |
 | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | **OS**                         | [Arch Linux](https://archlinux.org/)     |
-| **Terminal**                   | [kitty](https://github.com/kovidgoyal/kitty) |
+| **Terminal**                   | [WezTerm](https://github.com/wez/wezterm) |
 | **Multiplexer**                | [tmux](https://github.com/tmux/tmux)                            |
 | **Text Editor**                | [nvim](https://github.com/neovim/neovim)          |
-| **Shell**                      | [fish-shell](https://github.com/fish-shell/fish-shell) |
-| **Prompt Theme**               | [starship](https://github.com/starship/starship)              |
+| **Shell**                      | [zsh](https://github.com/ohmyzsh/ohmyzsh) |
 | **Window Manager**             | [Hyprland](https://github.com/hyprwm/Hyprland) |
 | **Display Manager**            | [ly](https://github.com/fairyglade/ly)                           |
 | **Notification Daemon**        | [Mako](https://github.com/emersion/mako)     |
@@ -45,16 +43,12 @@ cp -r ./etc/* /etc/
 ## Setup
 
 ### Arch Linux
-I was an Ubuntu user for a long time (7+ years).
-I eventually decided to migrate to Arch Linux to be able to control every single aspect of my os and also improve my linux knowledge.
-I love Arch's lightweight nature. Fits perfectly with my minimalistic approach.
-Arch's package manager, pacman, and AUR are a blessing! you have to use it to see
-how good this is!
-
+I was an Ubuntu user for a long time (7+ years) but eventually decided to migrate to Arch Linux
+It makes it possible to control every single aspect of my OS and also improve my linux knowledge.
+Arch's lightweight nature is aligned with my minimalistic approach.
+Also I like Arch's package manager, pacman, and AUR more than apt.
 
 ### Hyprland (Wayland)
-
-
 Now that Wayland is becoming stable and lots of people are creating packages for it,
 Hyprland is an amazing tiling window manager for wayland.
 It's highly customizablity and native Wayland support significantly enhance my workflow compared to traditional X11 setups.
@@ -68,24 +62,20 @@ But both of them are extremely bloated.
 So I chose `Ly` as my display manager, keeping everything minimal.
 
 
-## Shell and Prompt Engine (Fish, Starship, ZSH)
-### Fish
-- Fish: Smart and user-friendly command line shell. Includes syntax highlighting, autosuggest-as-you-type, fancy tab completions
-- Starship: Minimal, blazing-fast, and customizable prompt for any shell! 
-- ZSH (Alternative to Fish): Unix shell with tons of quality of life features.
+## Shell and Prompt Engine (Starship, ZSH)
+### ZSH
+- ZSH with Oh My ZSH 
 
 
-## Terminal and Multiplexer (Wezterm, Tmux, Kitty)
+## Terminal and Multiplexer (Wezterm, Tmux)
 ### Wezterm
 - Wezterm: a GPU-Accelared cross-platform terminal emulator that supports font ligatures
 - Tmux: Highly customizable terminal multiplexer
-- Kitty (Alternative to Wezterm): Cross-platform, fast, feature-rich, GPU based terminal.
 
 
 ### Editor (Neovim)
-- My go-to editor is Neovim, a Vim-based powerhouse equipped with thousands of plugins and features. It strikes a balance between functionality and efficiency that I'm proud to use.
-- I mainly use Neovim but I also use other IDEs if I am working on a project with a huge codebase. I am not crazy :D
-- I spent a lot of time coming up with something that is not bloated but a ton of features and am very proud of this config.
+- My go-to editor is Neovim, a highly customizable and modern vim-based editor.
+- I mainly use Neovim but I also other IDEs if I am working on a project with a huge codebase.
 
 
 ## WIP
