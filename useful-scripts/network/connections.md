@@ -41,10 +41,10 @@ Basic network configurator.
 # nmcli --ask device wifi connect <ssid>
 sudo systemctl start iwd
 iwctl
-    device list
-    station <device_name> scan
-    station <device_name> get-networks
-    station <device_name> connect <SSID>
+> device list
+> station <device_name> scan
+> station <device_name> get-networks
+> station <device_name> connect <SSID>
 ```
 
 If you want to connect to a 8021x security network do the next 3 steps.
