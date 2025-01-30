@@ -1,5 +1,5 @@
 # Setting up wifi during installation:
-# https://wiki.archlinux.org/title/Iwd
+https://wiki.archlinux.org/title/Iwd
 
 # Wifi
 Do not use Network Manager and IWD together.
