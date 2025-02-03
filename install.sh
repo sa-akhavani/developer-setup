@@ -32,7 +32,8 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 # Also check pwvucontrol
 ####
 sudo pacman -S pipewire wireplumber
-sudo pacman -S coppwr easyeffects pulsemixer
+sudo pacman -S easyeffects pulsemixer
+# sudo pacman -S coppwr
 sudo pacman -S playerctl
 
 
