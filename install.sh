@@ -89,7 +89,7 @@ sudo pacman -S bluez bluez-utils blueman
 # XDG Desktop portal for Hyprland (must have)
 ####
 # sudo pacman -S xdg-desktop-portal-hyprland
-yay -S xdg-desktop-portal-hyprland-git
+yay -S xdg-desktop-portal-hyprland
 
 
 ####
@@ -207,7 +207,7 @@ sudo gem install fusuma --no-user-instal
 ####
 # Color picker
 ####
-yay -S hyprpicker-git
+yay -S hyprpicker
 
 
 ####
@@ -230,13 +230,7 @@ yay -S vazirmatn-fonts
 ####
 # Icon theme - Papirus
 ####
-yay -S papirus-icon-theme-git
-
-
-####
-# Break Reminder
-####
-yay -S ianny-git
+yay -S papirus-icon-theme
 
 
 ####

@@ -48,7 +48,22 @@ iwctl
 ```
 
 If you want to connect to a 8021x security network do the next 3 steps.
-Add ssid setting in /var/lib/iwd/<ssid.security>
+
+Add ssid setting in /var/lib/iwd/<ssid.security>. Example File:
+```bash
+[Security]
+EAP-Method=PEAP
+EAP-Identity=anonymous@realm.edu
+EAP-PEAP-CACert=/path/to/root.crt
+EAP-PEAP-ServerDomainMask=radius.realm.edu
+EAP-PEAP-Phase2-Method=MSCHAPV2
+EAP-PEAP-Phase2-Identity=johndoe@realm.edu
+EAP-PEAP-Phase2-Password=hunter2
+
+[Settings]
+AutoConnect=true
+```
+
 MAYBE change `/etc/iwd/main.conf`
 MAYBE `iconv -t utf16le | openssl md4 -provider legacy # hash your password`
 
@@ -61,4 +76,5 @@ iwctl
 > station <station_name> connect <ssid>
 > exit
 ```
+
 
