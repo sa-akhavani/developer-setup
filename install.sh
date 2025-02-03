@@ -249,24 +249,7 @@ yay -S pipes.sh
 ####
 # Applications
 ####
-# Notes
-yay -S obsidian
-
-# Browser
-sudo pacman -S firefox
-
 # Spotify
-yay -S spotify   # Official Client
+# yay -S spotify   # Official Client
 # yay -S spotify-launcher
-pacman -S ncspot # Command Line Unofficial Client
-
-# Messangers
-yay -S telegram-desktop discord
-sudo pacman -S signal-desktop
-
-# Teams and Slack
-yay -S slack-desktop teams
-
-# Media Players
-yay -S vlc jellyfin-media-player 
-# yay -S mpv
+# pacman -S ncspot # Command Line Unofficial Spotify Client
