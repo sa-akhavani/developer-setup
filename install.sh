@@ -1,26 +1,27 @@
 ####
-# Network Connection - iwd + iwgtk
 # Network Manager + network-manager-applet + nmtui are alternatives
+# Alternatives - iwd + iwgtk + impala (tui)
 ###
-yay -S iwd iwgtk
-# sudo pacman -S network-manager-applet nmtui
-# yay -S nmtui
-
+# sudo pacman -S iwd iwgtk impala
+sudo pacman -Sy networkmanager network-manager-applet
 
 ####
 # Installing dependencies and useful packages
 ####
-sudo pacman -S git base-devel
-sudo pacman -S cmake make gcc
-sudo pacman -S fzf lsd bat
-sudo pacman -S pacman-contrib
+sudo pacman -Sy git base-devel
+sudo pacman -Sy cmake make gcc
+sudo pacman -Sy fzf lsd bat
+sudo pacman -Sy pacman-contrib
 
 
 ####
 # AUR package manager - Yay
 ####
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
+####
+yay -S nmtui nmcli
+####
 
 ####
 # Audio - Pipewire + Wireplumber + Coppwr + EasyEffects + Pulsemixer + Playerctl
@@ -33,7 +34,8 @@ git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 # Also check pwvucontrol
 ####
 sudo pacman -S pipewire wireplumber
-sudo pacman -S coppwr easyeffects pulsemixer
+sudo pacman -S easyeffects pulsemixer
+# sudo pacman -S coppwr
 sudo pacman -S playerctl
 
 
@@ -48,19 +50,26 @@ sudo pacman -S xkeyboard-config
 
 
 ####
-# Terminal - Kitty + Tmux
+# Terminal Wezterm + Tmux
 ####
-sudo pacman -S kitty tmux
+yay -S ghostty-git tmux
 git clone https://github.com/gpakosz/.tmux.git ~/Programs/tmux
 mkdir -p ~/.config/tmux
 ln -s  ~/Programs/tmux/.tmux.conf ~/.config/tmux/tmux.conf
 
 
 ####
-# Shell and Prompt Theme Engine - Fish + Starship
+# Default Shell and ohmyzsh
 ####
-sudo pacman -S fish starship
-chsh -s /usr/bin/fish # change default shell
+chsh -s /usr/bin/zsh # change default shell to zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" #ohmyzsh
+# Install plugins
+cd ~/.oh-my-zsh/custom/plugins
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+git clone git@github.com:zsh-users/zsh-autosuggestions.git
+
+# misfortune command
+yay -S misfortune
 
 
 ####
@@ -89,7 +98,7 @@ sudo pacman -S bluez bluez-utils blueman
 # XDG Desktop portal for Hyprland (must have)
 ####
 # sudo pacman -S xdg-desktop-portal-hyprland
-yay -S xdg-desktop-portal-hyprland-git
+yay -S xdg-desktop-portal-hyprland
 
 
 ####
@@ -179,14 +188,16 @@ sudo pacman -S polkit-kde-agent
 
 ####
 # Waybar Setup
-# Don't install it using aur or pacman
+# Don't install waybar-git using aur
 # it doesn't have support for cava module
-# sudo pacman -S waybar
 ####
 sudo usermod -aG input $USER # Waybar module for keyboard status needs this
 yay -S libcava #libcava is needed for waybar
-git clone https://aur.archlinux.org/waybar-git.git
-cd waybar-git
+yay -S waybar-cava # This is the version that has cava support
+
+# OR, add cava support to source and build it:
+# git clone https://aur.archlinux.org/waybar-git.git
+# cd waybar-git
 # vim PKGBUILD
 # change Dcava=diabled -> Dcava=enabled
 # add Dmpd=enabled
@@ -207,7 +218,7 @@ sudo gem install fusuma --no-user-instal
 ####
 # Color picker
 ####
-yay -S hyprpicker-git
+yay -S hyprpicker
 
 
 ####
@@ -218,9 +229,10 @@ yay -S hyprpicker-git
 # mkdir ~/.local/share/fonts/
 #
 ####
-sudo pacman -S ttf-fira-code ttf-nerd-fonts-symbols-mono ttf-liberation ttf-opensans
+yay -S ttf-fira-code ttf-nerd-fonts-symbols-mono ttf-opensans
 yay -S ttf-apple-emoji
 yay -S vazirmatn-fonts
+yay -S ttf-liberation
 # yay -S vazir-code-fonts
 # fc-cache -f -v # clear and regenerate font cache
 # fc-list | grep "FiraCode Nerd Font" # confirming installation
@@ -230,13 +242,7 @@ yay -S vazirmatn-fonts
 ####
 # Icon theme - Papirus
 ####
-yay -S papirus-icon-theme-git
-
-
-####
-# Break Reminder
-####
-yay -S ianny-git
+yay -S papirus-icon-theme
 
 
 ####
@@ -250,24 +256,7 @@ yay -S pipes.sh
 ####
 # Applications
 ####
-# Notes
-yay -S obsidian
-
-# Browser
-sudo pacman -S firefox
-
 # Spotify
-yay -S spotify   # Official Client
+# yay -S spotify   # Official Client
 # yay -S spotify-launcher
-pacman -S ncspot # Command Line Unofficial Client
-
-# Messangers
-yay -S telegram-desktop discord
-sudo pacman -S signal-desktop
-
-# Teams and Slack
-yay -S slack-desktop teams
-
-# Media Players
-yay -S vlc jellyfin-media-player 
-# yay -S mpv
+# pacman -S ncspot # Command Line Unofficial Spotify Client

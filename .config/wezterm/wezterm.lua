@@ -4,7 +4,6 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-
 -- Enable this on Windows only
 -- config.default_domain = 'WSL:Ubuntu-18.04'
 
@@ -42,11 +41,11 @@ config.default_cursor_style = "BlinkingBar"
 config.initial_cols = 80
 config.initial_rows = 25
 
+
 -- config.background = {
 -- 	source = { File = { path = "/home/ali/Downloads/Backgrounds/spaceship_bg_1.png" } },
 -- }
 -- config.window_background_image = "/home/ali/Downloads/Alien_Ship_bg_vert_images/Backgrounds/spaceship_bg_1.png"
-
 
 -- config.color_scheme = 'AdventureTime'
 config.color_scheme = "OneDark"
