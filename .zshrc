@@ -110,12 +110,6 @@ export PATH="$PATH:/opt/nvim/"
 
 # tmux setup plugins
 export TMUX_PLUGIN_MANAGER_PATH="$HOME/.tmux/plugins"
-## tmux automatic window name change dir
-tmux-window-name() {
-	($TMUX_PLUGIN_MANAGER_PATH/tmux-window-name/scripts/rename_session_windows.py &)
-}
-add-zsh-hook chpwd tmux-window-name
-
 
 # Setup ssh-agent and keyserver
 #
@@ -145,4 +139,4 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Run fortune on each session
-fortune
+misfortune

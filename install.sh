@@ -3,23 +3,25 @@
 # Alternatives - iwd + iwgtk + impala (tui)
 ###
 # sudo pacman -S iwd iwgtk impala
-sudo pacman -S networkmanager nmtui nmcli network-manager-applet
-
+sudo pacman -Sy networkmanager network-manager-applet
 
 ####
 # Installing dependencies and useful packages
 ####
-sudo pacman -S git base-devel
-sudo pacman -S cmake make gcc
-sudo pacman -S fzf lsd bat
-sudo pacman -S pacman-contrib
+sudo pacman -Sy git base-devel
+sudo pacman -Sy cmake make gcc
+sudo pacman -Sy fzf lsd bat
+sudo pacman -Sy pacman-contrib
 
 
 ####
 # AUR package manager - Yay
 ####
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
+####
+yay -S nmtui nmcli
+####
 
 ####
 # Audio - Pipewire + Wireplumber + Coppwr + EasyEffects + Pulsemixer + Playerctl
@@ -50,7 +52,7 @@ sudo pacman -S xkeyboard-config
 ####
 # Terminal Wezterm + Tmux
 ####
-sudo pacman -S wezterm tmux
+yay -S ghostty-git tmux
 git clone https://github.com/gpakosz/.tmux.git ~/Programs/tmux
 mkdir -p ~/.config/tmux
 ln -s  ~/Programs/tmux/.tmux.conf ~/.config/tmux/tmux.conf
@@ -61,6 +63,13 @@ ln -s  ~/Programs/tmux/.tmux.conf ~/.config/tmux/tmux.conf
 ####
 chsh -s /usr/bin/zsh # change default shell to zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" #ohmyzsh
+# Install plugins
+cd ~/.oh-my-zsh/custom/plugins
+git clone git@github.com:zsh-users/zsh-syntax-highlighting.git
+git clone git@github.com:zsh-users/zsh-autosuggestions.git
+
+# misfortune command
+yay -S misfortune
 
 
 ####
@@ -179,14 +188,16 @@ sudo pacman -S polkit-kde-agent
 
 ####
 # Waybar Setup
-# Don't install it using aur or pacman
+# Don't install waybar-git using aur
 # it doesn't have support for cava module
-# sudo pacman -S waybar
 ####
 sudo usermod -aG input $USER # Waybar module for keyboard status needs this
 yay -S libcava #libcava is needed for waybar
-git clone https://aur.archlinux.org/waybar-git.git
-cd waybar-git
+yay -S waybar-cava # This is the version that has cava support
+
+# OR, add cava support to source and build it:
+# git clone https://aur.archlinux.org/waybar-git.git
+# cd waybar-git
 # vim PKGBUILD
 # change Dcava=diabled -> Dcava=enabled
 # add Dmpd=enabled
@@ -218,9 +229,10 @@ yay -S hyprpicker
 # mkdir ~/.local/share/fonts/
 #
 ####
-sudo pacman -S ttf-fira-code ttf-nerd-fonts-symbols-mono ttf-liberation ttf-opensans
+yay -S ttf-fira-code ttf-nerd-fonts-symbols-mono ttf-opensans
 yay -S ttf-apple-emoji
 yay -S vazirmatn-fonts
+yay -S ttf-liberation
 # yay -S vazir-code-fonts
 # fc-cache -f -v # clear and regenerate font cache
 # fc-list | grep "FiraCode Nerd Font" # confirming installation
