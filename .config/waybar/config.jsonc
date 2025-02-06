@@ -16,7 +16,7 @@
     "~/.config/waybar/modules/network.jsonc",
     "~/.config/waybar/modules/systeminfo.jsonc",
     "~/.config/waybar/modules/idle_inhibitor.jsonc",
-    "~/.config/waybar/modules/custom-weather.jsonc",
+    // "~/.config/waybar/modules/custom-weather.jsonc",
     "~/.config/waybar/modules/custom-updater.jsonc",
     "~/.config/waybar/modules/custom-color-picker.jsonc",
   ],
@@ -68,7 +68,7 @@
     // "keyboard-state",
     "hyprland/language",
     // "clock#c2", // multiple instances of the same module
-    "custom/weather",
+    // "custom/weather",
     "clock",
     "tray",
   ],
