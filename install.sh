@@ -52,7 +52,7 @@ sudo pacman -S xkeyboard-config
 ####
 # Terminal Wezterm + Tmux
 ####
-yay -S ghostty-git tmux
+yay -S wezterm-git tmux
 git clone https://github.com/gpakosz/.tmux.git ~/Programs/tmux
 mkdir -p ~/.config/tmux
 ln -s  ~/Programs/tmux/.tmux.conf ~/.config/tmux/tmux.conf
@@ -248,7 +248,7 @@ yay -S papirus-icon-theme
 ####
 # Fun
 ####
-sudo pacman -S cmatrix
+yay -S cmatrix
 yay -S pipes.sh
 # yay -S cava
 #
